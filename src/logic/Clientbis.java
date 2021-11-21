@@ -1,16 +1,16 @@
 package logic;
 
-public class Client extends Personne {
+public class Clientbis extends Personnebis {
 
-    public Client() {
+    public Clientbis() {
         super(0);
     }
 
-    public Client(int id) {
+    public Clientbis(int id) {
         super(id);
     }
 
-    public void ajouterPlanche(Planche planche) {
+    public void ajouterPlanche(Planchebis planche) {
         super.ajouterP(planche);
     }
 

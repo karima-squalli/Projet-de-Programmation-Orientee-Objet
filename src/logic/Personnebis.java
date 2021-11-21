@@ -1,24 +1,30 @@
 package logic;
 
-public abstract class Personne {
+public abstract class Personnebis {
 
     private int id;
     private int nombreP;
-    private int tailleCourante = 0;
-    private int tailleMaximale = 10;
-    private RectangleDeBois[] bois = new RectangleDeBois[tailleMaximale];
+    protected int tailleCourante = 0;
+    protected int tailleMaximale = 10;
+    protected RectangleDeBoisbis[] bois = new RectangleDeBoisbis[tailleMaximale];
 
-    Personne(int id) {
+    Personnebis(int id) {
         this.id = id;
     }
 
+    //void setBois(RectangleDeBois[] bois) {
+//        this.bois = bois;
+//    }
 
-    void ajouterP(RectangleDeBois element) {
+    void ajouterP(RectangleDeBoisbis element) {
+
+//        bois[tailleCourante] = element;
+//        tailleCourante++;
 
         if (tailleCourante == tailleMaximale) {
             tailleMaximale = tailleMaximale * 2;
-            RectangleDeBois[] tmp = bois.clone();
-            bois = new RectangleDeBois[tailleMaximale];
+            RectangleDeBoisbis[] tmp = bois.clone();
+            bois = new RectangleDeBoisbis[tailleMaximale];
             for (int i = 0; i < tailleCourante; i++)
                 bois[i] = tmp[i];
         }
@@ -38,7 +44,7 @@ public abstract class Personne {
         return tailleCourante;
     }
 
-    public RectangleDeBois getBois(int i) {
+    public RectangleDeBoisbis getBois(int i) {
         return bois[i];
     }
 }

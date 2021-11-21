@@ -1,16 +1,16 @@
 package logic;
 
-public class Fournisseur extends Personne {
+public class Fournisseurbis extends Personnebis {
 
-    public Fournisseur(int id) {
+    public Fournisseurbis(int id) {
         super(id);
     }
 
-    public Fournisseur() {
+    public Fournisseurbis() {
         super(0);
     }
 
-    public void ajouterPanneau(Panneau panneau) {
+    public void ajouterPanneau(Panneaubis panneau) {
         super.ajouterP(panneau);
     }
 

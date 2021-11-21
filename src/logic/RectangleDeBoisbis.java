@@ -4,12 +4,12 @@ import interfaces.Validable;
 
 import java.util.ArrayList;
 
-public class RectangleDeBois {
+public class RectangleDeBoisbis {
     protected int id;
     protected int nombre;
     ArrayList<Validable> listV = new ArrayList<>();
 
-    protected RectangleDeBois(int id, int nombre) {
+    protected RectangleDeBoisbis(int id, int nombre) {
         this.id = id;
         this.nombre = nombre;
     }
