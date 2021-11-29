@@ -1,6 +1,6 @@
 package logic;
 
-public abstract class Personne {
+abstract class Personne implements Generable{
 
     private int id;
     private int nombreP;
@@ -13,7 +13,7 @@ public abstract class Personne {
     }
 
 
-    void ajouterP(RectangleDeBois element) {
+    public void ajouterP(RectangleDeBois element) {
 
         if (tailleCourante == tailleMaximale) {
             tailleMaximale = tailleMaximale * 2;

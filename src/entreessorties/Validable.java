@@ -1,4 +1,4 @@
-package interfaces;
+package entreessorties;
 
 public interface Validable {
     Boolean isValid();

@@ -1,20 +1,20 @@
 package logic;
 
-public class Client extends Personne {
+ class Client extends Personne {
 
-    public Client() {
+    Client() {
         super(0);
     }
 
-    public Client(int id) {
+    Client(int id) {
         super(id);
     }
 
-    public void ajouterPlanche(Planche planche) {
+    void ajouterPlanche(Planche planche) {
         super.ajouterP(planche);
     }
 
-    public int getNombrePlanches() {
+    int getNombrePlanches() {
         return super.getNombreP();
     }
 }

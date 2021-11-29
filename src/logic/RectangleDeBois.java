@@ -1,6 +1,6 @@
 package logic;
 
-import interfaces.Validable;
+import entreessorties.Validable;
 
 import java.util.ArrayList;
 
@@ -9,7 +9,7 @@ public class RectangleDeBois {
     protected int nombre;
     ArrayList<Validable> listV = new ArrayList<>();
 
-    protected RectangleDeBois(int id, int nombre) {
+    public RectangleDeBois(int id, int nombre) {
         this.id = id;
         this.nombre = nombre;
     }

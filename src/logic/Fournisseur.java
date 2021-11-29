@@ -1,6 +1,6 @@
 package logic;
 
-public class Fournisseur extends Personne {
+class Fournisseur extends Personne {
 
     public Fournisseur(int id) {
         super(id);

@@ -1,12 +1,8 @@
 package logic;
 
-import interfaces.Validable;
+import entreessorties.Validable;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 
@@ -50,5 +46,5 @@ public class Date implements Validable {
     }
 
     // dans XMLReader new Date client.addValidable(date) etc
-    // interfaces : interface Reader et XMLReader l implémente (readclientfrom(Readable) et .. et Readable aussi interface ou classe abtraite  - demander au prof  a quoi sert interface readable
+    // entreesorties : interface Reader et XMLReader l implémente (readclientfrom(Readable) et .. et Readable aussi interface ou classe abtraite  - demander au prof  a quoi sert interface readable
 }

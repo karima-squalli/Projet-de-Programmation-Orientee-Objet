@@ -1,6 +1,6 @@
 package logic;
 
-import interfaces.Validable;
+import entreessorties.Validable;
 
 public class Prix implements Validable {
 
