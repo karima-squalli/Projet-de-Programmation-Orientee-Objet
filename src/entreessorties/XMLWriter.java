@@ -4,66 +4,36 @@ import javax.xml.stream.XMLOutputFactory;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamWriter;
 import java.io.FileOutputStream;
+import java.util.ArrayList;
 
 class XMLWriter implements Writer {
 
-
-    public void startDocDecoupe(FileOutputStream out) throws XMLStreamException {
-
-        XMLOutputFactory output = XMLOutputFactory.newInstance();
-        XMLStreamWriter writer = output.createXMLStreamWriter(out);
-
-        writer.writeStartElement("decoupes>");
-        //writer.flush();
-        writer.close();
-    }
-
-    public void writeDecoupe(FileOutputStream out, int idFournisseur, int idPanneau, int idClient, int idPlanche, int nombre, int x, int y) throws XMLStreamException {
+    public void writeDecoupe(int doc, ArrayList<String>data, FileOutputStream out, int idFournisseur, String panneau, int idClient, String planche, String x, String y) throws XMLStreamException {
 
         XMLOutputFactory output = XMLOutputFactory.newInstance();
         XMLStreamWriter writer = output.createXMLStreamWriter(out);
 
-        //writer.writeEmptyElement("decoupe");
+        if (doc == 0) // Start of document
+            writer.writeStartElement(data.get(0));
 
-        writer.writeStartElement("decoupe");
+        writer.writeStartElement(data.get(1));
 
-        writer.writeEmptyElement("fournisseur");
-        //writer.add(eventFactory.createEmptyElement("", "", "fournisseur"));
-        // write XML attribute
-        writer.writeAttribute("id", String.valueOf(idFournisseur));
-        writer.writeAttribute("panneau", String.valueOf(idPanneau));
+        writer.writeEmptyElement(data.get(2));
+        writer.writeAttribute(data.get(3), String.valueOf(idFournisseur));
+        writer.writeAttribute(data.get(4), panneau);
 
-        //writer.writeEndElement();
-        //writer.writeAttribute("", "", "fournisseur\n");
+        writer.writeEmptyElement(data.get(5));
+        writer.writeAttribute(data.get(3), String.valueOf(idClient));
+        writer.writeAttribute(data.get(6), planche);
 
-        writer.writeEmptyElement("client");
-        // write XML attribute
-        writer.writeAttribute("id", String.valueOf(idClient));
-        writer.writeAttribute("planche", String.valueOf(idPlanche));
-        writer.writeAttribute("nombre", String.valueOf(nombre));
-
-        //writer.add(eventFactory.createEndElement("", "", "client\n"));
-
-        writer.writeEmptyElement("position");
-        // write XML attribute
-        writer.writeAttribute(  "x", String.valueOf(x));
-        writer.writeAttribute("y", String.valueOf(y));
+        writer.writeEmptyElement(data.get(7));
+        writer.writeAttribute(data.get(8), x);
+        writer.writeAttribute(data.get(9), y);
 
         writer.writeEndElement();
 
-        writer.flush();
-        writer.close();
-    }
-
-    public void endDocDecoupe(FileOutputStream out) throws XMLStreamException {
-
-        XMLOutputFactory output = XMLOutputFactory.newInstance();
-        XMLStreamWriter writer = output.createXMLStreamWriter(out);
-
-        // writer.add(eventFactory.createEndElement("", "", "decoupes\n"));
-        //writer.writeEndElement();
-        writer.writeStartElement("/decoupes>");
-
+        if (doc == 1) // End of document
+            writer.writeStartElement(data.get(10));
         writer.flush();
         writer.close();
     }

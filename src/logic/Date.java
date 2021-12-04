@@ -1,7 +1,5 @@
 package logic;
 
-import entreessorties.Validable;
-
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 

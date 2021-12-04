@@ -6,19 +6,19 @@ abstract class Personne implements Generable{
     private int nombreP;
     private int tailleCourante = 0;
     private int tailleMaximale = 10;
-    private RectangleDeBois[] bois = new RectangleDeBois[tailleMaximale];
+    private Bois[] bois = new Bois[tailleMaximale];
 
     Personne(int id) {
         this.id = id;
     }
 
 
-    public void ajouterP(RectangleDeBois element) {
+    public void add(Bois element) {
 
         if (tailleCourante == tailleMaximale) {
             tailleMaximale = tailleMaximale * 2;
-            RectangleDeBois[] tmp = bois.clone();
-            bois = new RectangleDeBois[tailleMaximale];
+            Bois[] tmp = bois.clone();
+            bois = new Bois[tailleMaximale];
             for (int i = 0; i < tailleCourante; i++)
                 bois[i] = tmp[i];
         }
@@ -38,7 +38,7 @@ abstract class Personne implements Generable{
         return tailleCourante;
     }
 
-    public RectangleDeBois getBois(int i) {
+    public Bois getBois(int i) {
         return bois[i];
     }
 }

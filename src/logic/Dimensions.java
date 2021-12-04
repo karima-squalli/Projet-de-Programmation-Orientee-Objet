@@ -1,7 +1,5 @@
 package logic;
 
-import entreessorties.Validable;
-
 public class Dimensions implements Validable {
 
     private String longueurString;

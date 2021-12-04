@@ -1,4 +1,4 @@
-package entreessorties;
+package logic;
 
 public interface Validable {
     Boolean isValid();

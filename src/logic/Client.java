@@ -1,6 +1,8 @@
 package logic;
 
- class Client extends Personne {
+import java.util.ArrayList;
+
+class Client extends Personne {
 
     Client() {
         super(0);
@@ -10,11 +12,23 @@ package logic;
         super(id);
     }
 
-    void ajouterPlanche(Planche planche) {
-        super.ajouterP(planche);
-    }
-
     int getNombrePlanches() {
         return super.getNombreP();
+    }
+
+    @Override
+    public void add(Generable g) {
+        Planche planche = (Planche)g;
+        super.add(planche);
+    }
+
+    @Override
+    public void updateGenerable(ArrayList<Validable> v) {
+
+    }
+
+    @Override
+    public Boolean checkAllValidable() {
+        return null;
     }
 }

@@ -12,4 +12,9 @@ public class FournisseurFactory implements Factory{
         Fournisseur fournisseur= new Fournisseur(id);
         return fournisseur;
     }
+
+    @Override
+    public Generable generateGenerable(int id, int nombre) {
+        return null;
+    }
 }

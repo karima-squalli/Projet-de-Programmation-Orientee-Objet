@@ -1,7 +1,5 @@
 package logic;
 
-import entreessorties.Validable;
-
 public class Prix implements Validable {
 
     String prixString;
@@ -17,7 +15,7 @@ public class Prix implements Validable {
             return false;
         }
         prix = Double.parseDouble(prixString);
-        if (prix < 0){
+        if (prix < 0) {
             return false;
         }
         return true;

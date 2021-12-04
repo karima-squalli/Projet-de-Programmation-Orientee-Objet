@@ -2,6 +2,7 @@ package entreessorties;
 
 import javax.xml.stream.XMLStreamException;
 import java.io.FileOutputStream;
+import java.util.ArrayList;
 
 public interface Writer {
 
@@ -13,7 +14,5 @@ public interface Writer {
         return null;
     }
 
-    void startDocDecoupe(FileOutputStream out) throws XMLStreamException;
-    void writeDecoupe(FileOutputStream out, int idFournisseur, int idPanneau, int idClient, int idPlanche, int nombre, int x, int y) throws XMLStreamException;
-    void endDocDecoupe(FileOutputStream out) throws XMLStreamException;
+    void writeDecoupe(int doc, ArrayList<String> data, FileOutputStream out, int idFournisseur, String panneau, int idClient, String planche, String x, String y) throws XMLStreamException;
 }

@@ -63,7 +63,7 @@ class XMLReader implements Reader {
 //    }
 
     @Override
-    public ArrayList<Generable> readGenerable(String fileName, Factory factory) {
+    public ArrayList<Generable> readGenerable(ArrayList<String> data, String fileName, Factory f1, Factory f2) {
         FileInputStream file;
         ArrayList<Generable> generables = new ArrayList<>();
         try {
@@ -71,30 +71,34 @@ class XMLReader implements Reader {
             XMLInputFactory xmlInFact = XMLInputFactory.newInstance();
             XMLStreamReader reader = xmlInFact.createXMLStreamReader(file);
 
-            Generable generable = factory.generateGenerable();
+            Generable generable = f1.generateGenerable();
+            boolean start = true;
             while (reader.hasNext()) {
                 if (reader.next() == XMLStreamConstants.START_ELEMENT) {
                     String name = reader.getLocalName();
+                    if (start) {
+                        reader.nextTag();
+                        start = false;
+                    }
                     if (name == "fournisseur" || name == "fournisseurs" || name == "clients" || name == "client") {
-                        if (name == "fournisseurs" || name == "clients")
-                            reader.nextTag(); //On regarde le premier client
-                        if (name == "fournisseur" || name == "client")
-                            generables.add(generable); // On ajoute le premier fournisseur à la liste des fournisseurs
-                        generable = factory.generateGenerable(Integer.parseInt(reader.getAttributeValue(0)));
-                        reader.nextTag(); //On regarde la première commande de planche demandée
+                        if (name == data.get(0) || name == data.get(1))
+                            generables.add(generable);
+                        generable = f1.generateGenerable(Integer.parseInt(reader.getAttributeValue(0)));
+                        reader.nextTag();
                     }
 
-                    RectangleDeBois bois = new RectangleDeBois(Integer.parseInt(reader.getAttributeValue(0)), Integer.parseInt(reader.getAttributeValue(1)));
+                    ArrayList<Validable> listV = new ArrayList<>();
 
-
+                    Generable g = f2.generateGenerable(Integer.parseInt(reader.getAttributeValue(0)), Integer.parseInt(reader.getAttributeValue(1)));
                     Date date = new Date(reader.getAttributeValue(2));
                     Prix prix = new Prix(reader.getAttributeValue(3));
                     reader.nextTag(); // On regarde les dimensions
                     Dimensions dimensions = new Dimensions(reader.getAttributeValue(0),reader.getAttributeValue(1));
-                    bois.addValidable(date);
-                    bois.addValidable(prix);
-                    bois.addValidable(dimensions);
-                    generable.ajouterP(bois);
+                    listV.add(date);
+                    listV.add(prix);
+                    listV.add(dimensions);
+                    g.updateGenerable(listV);
+                    generable.add(g);
                 }
             }
             generables.add(generable);

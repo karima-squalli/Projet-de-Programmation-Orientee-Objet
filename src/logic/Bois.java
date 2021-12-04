@@ -1,21 +1,22 @@
 package logic;
 
-import entreessorties.Validable;
-
 import java.util.ArrayList;
 
-public class RectangleDeBois {
+abstract class Bois implements Generable {
+
     protected int id;
     protected int nombre;
-    ArrayList<Validable> listV = new ArrayList<>();
+    protected ArrayList<Validable> listV = new ArrayList<>();
 
-    public RectangleDeBois(int id, int nombre) {
+    public Bois(int id, int nombre) {
         this.id = id;
         this.nombre = nombre;
     }
 
-    public void addValidable(Validable v) {
-        listV.add(v);
+
+
+    public void updateGenerable(ArrayList<Validable> v) {
+        listV = v;
     }
 
     public Boolean checkAllValidable() {

@@ -1,4 +1,4 @@
-package etape1;
+package logic;
 
 import entreessorties.Reader;
 // import entreessorties.XMLReader;
@@ -14,6 +14,14 @@ public class Test1
 //        Reader s = null;
 //        Reader r = s.getReader();
         Reader r = Reader.getReader(0);
+
+        //commencer par lire les clients
+
+        Factory f1 = new ClientFactory();
+        Factory f2 = new PlancheFactory();
+        //r.readGenerable("bli.xml",f1,f2);
+
+
 
 //        ArrayList<Client> clients1= r.ReadClients("src/etape1/clients.xml");
 //        XMLReader clients_file = new XMLReader();
@@ -46,15 +54,23 @@ public class Test1
         // Testing generable
         System.out.println("=========Testing generable=========");
 
-        Factory cf = new ClientFactory();
-        Factory ff = new FournisseurFactory();
+        Factory c1 = new ClientFactory();
+        Factory c2 = new PlancheFactory();
+        Factory c3 = new FournisseurFactory();
+        Factory c4 = new PanneauFactory();
 
-        List<Generable> clientsG = r.readGenerable("src/etape1/clients.xml", cf);
+        ArrayList<String> data = new ArrayList<>();
+        data.add("clients");
+        data.add("client");
+        List<Generable> clientsG = r.readGenerable(data,"src/etape1/clients.xml", c1, c2);
 
         for (Generable clientG : clientsG) {
             System.out.printf("\nLe client numéro %d effectue %d commandes.\n", clientG.getId(), clientG.getNombreP()); // comment savoir si c client ou fournisseur
             for (int j = 0; j < clientG.getTailleCourante(); j++) {
-                RectangleDeBois planche = clientG.getBois(j);
+                //Factory pf = new PlancheFactory();
+                Generable pg = clientG.getBois(j);
+                Planche planche = (Planche)pg;
+                //RectangleDeBois planche = clientG.getBois(j);
                 if (planche.checkAllValidable()) {
                     System.out.printf("Commande numéro %d valide.\n", j);
                 } else

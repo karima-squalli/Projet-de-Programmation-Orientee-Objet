@@ -12,4 +12,10 @@ public class ClientFactory implements Factory{
         Client client = new Client(id);
         return client;
     }
+
+    @Override
+    public Generable generateGenerable(int parseInt, int nombre) {
+        return null;
+    }
+
 }
