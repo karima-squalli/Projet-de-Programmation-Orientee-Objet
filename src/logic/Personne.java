@@ -26,6 +26,28 @@ abstract class Personne implements Generable{
         tailleCourante++;
         nombreP = tailleCourante;
     }
+
+    public void removeP(Bois elementToBeDeleted) {
+        Bois[] newBois = null;
+        for (int i = 0; i < bois.length - 1; i++) {
+            if (bois[i] == elementToBeDeleted) {
+
+                newBois = new Bois[bois.length - 1];
+                for (int index = 0; index < i; index++) {
+                    newBois[index] = bois[index];
+                }
+                for (int j = i; j < bois.length - 1; j++) {
+                    newBois[j] = bois[j + 1];
+                }
+
+                break;
+            }
+        }
+
+        this.bois = newBois;
+        tailleCourante--;
+    }
+
     public int getId() {
         return id;
     }

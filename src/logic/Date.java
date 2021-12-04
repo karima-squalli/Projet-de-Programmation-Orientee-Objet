@@ -4,8 +4,11 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 
-public class Date implements Validable {
+public class Date implements Validable,Comparable {
     String date;
+    private int day;
+    private int month;
+    private int year;
 
     public Date(String date){
         this.date=date;
@@ -20,9 +23,9 @@ public class Date implements Validable {
         if (!isInteger(date.substring(0, 2)) || !isInteger(date.substring(3, 5)) || !isInteger(date.substring(6, 8))) {
             return false;
         }
-        int day = Integer.parseInt(date.substring(0,2));
-        int month = Integer.parseInt(date.substring(3,5));
-        int year = Integer.parseInt(date.substring(6,8));
+        day = Integer.parseInt(date.substring(0,2));
+        month = Integer.parseInt(date.substring(3,5));
+        year = Integer.parseInt(date.substring(6,8));
 
 
         if ((day<1 || day >31) || (month<1 || month>12) || year<21) {
@@ -43,6 +46,24 @@ public class Date implements Validable {
         return true;
     }
 
+    public Boolean toCompare(Validable v) {
+        Date date_to_compare = (Date)v;
+
+        int day_to_compare = date_to_compare.day;
+        int month_to_compare = date_to_compare.month;
+        int year_to_compare = date_to_compare.year;
+
+        int day = Integer.parseInt(date.substring(0,2));
+        int month = Integer.parseInt(date.substring(3,5));
+        int year = Integer.parseInt(date.substring(6,8));
+
+        if((year_to_compare > year) || (year_to_compare == year && month_to_compare >month) || (year_to_compare == year && month_to_compare==month && day_to_compare>day))
+            return false;
+        return true;
+    }
+    String getDate(){
+        return date;
+    }
     // dans XMLReader new Date client.addValidable(date) etc
     // entreesorties : interface Reader et XMLReader l implémente (readclientfrom(Readable) et .. et Readable aussi interface ou classe abtraite  - demander au prof  a quoi sert interface readable
 }

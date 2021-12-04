@@ -6,6 +6,7 @@ class Panneau extends Bois {
         super(id, nombre);
     }
 
+
     @Override
     public void add(Generable g) {
 
@@ -19,11 +20,6 @@ class Panneau extends Bois {
     @Override
     public Bois getBois(int j) {
         return null;
-    }
-
-    @Override
-    public int getId() {
-        return 0;
     }
 
     @Override

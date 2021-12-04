@@ -1,6 +1,6 @@
 package logic;
 
-public class Prix implements Validable {
+public class Prix implements Validable,Comparable{
 
     String prixString;
     double prix;
@@ -19,5 +19,14 @@ public class Prix implements Validable {
             return false;
         }
         return true;
+    }
+    public Boolean toCompare(Validable v) {
+        Prix prix_to_compare = (Prix)v;
+        if(prix_to_compare.prix>prix)
+            return false;
+        return true;
+    }
+    String getPrixString(){
+        return prixString;
     }
 }

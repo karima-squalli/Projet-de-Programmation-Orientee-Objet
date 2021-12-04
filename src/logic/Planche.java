@@ -23,12 +23,9 @@ class Planche extends Bois {
     }
 
     @Override
-    public int getId() {
-        return 0;
-    }
-
-    @Override
     public int getNombreP() {
         return 0;
     }
+
+
 }

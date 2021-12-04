@@ -19,12 +19,12 @@ class XMLWriter implements Writer {
         writer.writeStartElement(data.get(1));
 
         writer.writeEmptyElement(data.get(2));
-        writer.writeAttribute(data.get(3), String.valueOf(idFournisseur));
-        writer.writeAttribute(data.get(4), panneau);
+        writer.writeAttribute(data.get(3), String.valueOf(idClient));
+        writer.writeAttribute(data.get(4), planche);
 
         writer.writeEmptyElement(data.get(5));
-        writer.writeAttribute(data.get(3), String.valueOf(idClient));
-        writer.writeAttribute(data.get(6), planche);
+        writer.writeAttribute(data.get(3), String.valueOf(idFournisseur));
+        writer.writeAttribute(data.get(6), panneau);
 
         writer.writeEmptyElement(data.get(7));
         writer.writeAttribute(data.get(8), x);

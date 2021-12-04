@@ -7,49 +7,14 @@ import logic.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import static logic.Algorithme.algorithme1;
+
 public class Test1
 {
     public static void main(String[] args) {
 
-//        Reader s = null;
-//        Reader r = s.getReader();
         Reader r = Reader.getReader(0);
 
-        //commencer par lire les clients
-
-        Factory f1 = new ClientFactory();
-        Factory f2 = new PlancheFactory();
-        //r.readGenerable("bli.xml",f1,f2);
-
-
-
-//        ArrayList<Client> clients1= r.ReadClients("src/etape1/clients.xml");
-//        XMLReader clients_file = new XMLReader();
-//        XMLReader fournisseurs_file = new XMLReader();
-//        ArrayList<Client> clients=clients_file.ReadClients("src/etape1/clients.xml");
-//        ArrayList<Fournisseur> fournisseurs = fournisseurs_file.ReadFournisseurs("src/etape1/fournisseurs.xml");
-//
-//        for (Client client : clients) {
-//            System.out.printf("\nLe client numéro %d effectue %d commandes.\n", client.getId(), client.getNombreP()); // comment savoir si c client ou fournisseur
-//            for (int j = 0; j < client.getTailleCourante(); j++) {
-//                Planche planche = (Planche) client.getBois(j);
-//                if (planche.checkAllValidable()) {
-//                    System.out.printf("Commande numéro %d valide.\n", j);
-//                } else
-//                    System.out.printf("Commande numéro %d non valide.\n", j);
-//            }
-//        }
-//        for (Fournisseur fournisseur : fournisseurs) {
-//            System.out.printf("\nLe fournisseur numéro %d fournit %d commandes.\n", fournisseur.getId(), fournisseur.getNombreP()); // comment savoir si c client ou fournisseur
-//            for (int j = 0; j < fournisseur.getTailleCourante(); j++) {
-//                Panneau panneau = (Panneau) fournisseur.getBois(j);
-//                if (panneau.checkAllValidable()) {
-//                    System.out.printf("Commande numéro %d valide.\n", j);
-//                } else
-//                    System.out.printf("Commande numéro %d non valide.\n", j);
-//
-//            }
-//        }
 
         // Testing generable
         System.out.println("=========Testing generable=========");
@@ -62,7 +27,13 @@ public class Test1
         ArrayList<String> data = new ArrayList<>();
         data.add("clients");
         data.add("client");
-        List<Generable> clientsG = r.readGenerable(data,"src/etape1/clients.xml", c1, c2);
+        ArrayList<Generable> clientsG = r.readGenerable(data,"src/etape2/clients.xml", c1, c2);
+
+        ArrayList<String> data2 = new ArrayList<>();
+        data2.add("fournisseurs");
+        data2.add("fournisseur");
+        ArrayList<Generable> fournisseursG = r.readGenerable(data2,"src/etape2/fournisseurs.xml", c3, c4);
+        ArrayList<Decoupe> decoupes = algorithme1(clientsG, fournisseursG);
 
         for (Generable clientG : clientsG) {
             System.out.printf("\nLe client numéro %d effectue %d commandes.\n", clientG.getId(), clientG.getNombreP()); // comment savoir si c client ou fournisseur
@@ -70,6 +41,9 @@ public class Test1
                 //Factory pf = new PlancheFactory();
                 Generable pg = clientG.getBois(j);
                 Planche planche = (Planche)pg;
+                Prix prix = (Prix)planche.getPrix();
+                Date date = (Date)planche.getDate();
+                System.out.println("id de planche : " + planche.getId() + "nombre : " + planche.getNombre() + " prix " + prix.getPrixString() + " date " + date.getDate());
                 //RectangleDeBois planche = clientG.getBois(j);
                 if (planche.checkAllValidable()) {
                     System.out.printf("Commande numéro %d valide.\n", j);

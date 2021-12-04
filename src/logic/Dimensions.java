@@ -1,6 +1,6 @@
 package logic;
 
-public class Dimensions implements Validable {
+public class Dimensions implements Validable,Comparable {
 
     private String longueurString;
     private String largeurString;
@@ -30,5 +30,15 @@ public class Dimensions implements Validable {
             return true;
         return false;
     }
+    public Boolean toCompare(Validable v) {
+        Dimensions dimensions_to_compare = (Dimensions)v;
+        if((dimensions_to_compare.longueur < longueur) || (dimensions_to_compare.largeur < largeur))
+            return false;
+        return true;
+    }
+
+    public String getLongueurString(){return longueurString;}
+
+    public String getLargeurString(){return largeurString;}
 
 }

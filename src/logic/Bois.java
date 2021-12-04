@@ -16,6 +16,7 @@ abstract class Bois implements Generable {
 
 
     public void updateGenerable(ArrayList<Validable> v) {
+
         listV = v;
     }
 
@@ -25,5 +26,26 @@ abstract class Bois implements Generable {
                 return false;
         }
         return true;
+    }
+
+    public void decrementNumber(int decrement){
+        this.nombre = this.nombre - decrement;
+    }
+    public int getId(){
+        return id;
+    }
+
+    public int getNombre(){return nombre;}
+
+    public Validable getDate(){
+        return listV.get(0);
+    }
+
+    public Validable getPrix(){
+        return listV.get(1);
+    }
+
+    public Validable getDimensions(){
+        return listV.get(2);
     }
 }
