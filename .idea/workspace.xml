@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0ec59de7-7626-4880-91bc-3f1a6f4b19d2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pg220_/logic/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pg220_/logic/Date.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pg220_/logic/Dimensions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pg220_/logic/Fournisseur.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pg220_/logic/Panneau.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pg220_/logic/Personne.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pg220_/logic/Planche.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pg220_/logic/Prix.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entreessorties/Writer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entreessorties/Writer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape2/decoupes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape2/decoupes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape2/exemple.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape2/exemple.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/Algorithme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Algorithme.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/Test2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Test2.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="223Yx1HivQEZEBtDlmDdMCAGK3Z" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main2" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="logic.MainEtape2" />
+      <module name="pg220-2021-ksquallihou_owankida" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0ec59de7-7626-4880-91bc-3f1a6f4b19d2" name="Changes" comment="" />
+      <created>1639067983692</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1639067983692</updated>
+      <workItem from="1639067987588" duration="13398000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
