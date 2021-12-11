@@ -1,6 +1,6 @@
 package logic;
 
-abstract class Personne implements Generable{
+abstract class Personne implements Generable, Validable{
 
     private int id;
     private int nombreP;
@@ -62,5 +62,21 @@ abstract class Personne implements Generable{
 
     public Bois getBois(int i) {
         return bois[i];
+    }
+
+    public Boolean isValid() {
+
+        for (int l = 0; l < tailleCourante; l++) {
+
+            Bois bois = this.bois[l];
+
+            if (!bois.checkAllValidable()) {
+                removeP(bois);
+                l--;
+            }
+        }
+        if (tailleCourante == 0)
+            return false;
+        return true;
     }
 }

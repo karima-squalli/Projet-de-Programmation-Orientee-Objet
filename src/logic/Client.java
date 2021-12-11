@@ -12,10 +12,6 @@ class Client extends Personne {
         super(id);
     }
 
-    int getNombrePlanches() {
-        return super.getNombreP();
-    }
-
     @Override
     public void add(Generable g) {
         Planche planche = (Planche)g;

@@ -7,13 +7,13 @@ abstract class Bois implements Generable {
     protected int id;
     protected int nombre;
     protected ArrayList<Validable> listV = new ArrayList<>();
+    protected int nombreInitial;
 
     public Bois(int id, int nombre) {
         this.id = id;
         this.nombre = nombre;
+        this.nombreInitial = nombre;
     }
-
-
 
     public void updateGenerable(ArrayList<Validable> v) {
 
@@ -21,15 +21,19 @@ abstract class Bois implements Generable {
     }
 
     public Boolean checkAllValidable() {
-        for (int i=0; i<listV.size(); i++) {
-            if (!listV.get(i).isValid())
+        for (Validable validable : listV) {
+            if (!validable.isValid())
                 return false;
         }
         return true;
     }
 
-    public void decrementNumber(int decrement){
-        this.nombre = this.nombre - decrement;
+    public void setNombre(int nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getNombreInitial() {
+        return nombreInitial;
     }
     public int getId(){
         return id;
@@ -47,5 +51,9 @@ abstract class Bois implements Generable {
 
     public Validable getDimensions(){
         return listV.get(2);
+    }
+
+    public Validable getDimensions(int i) {
+        return listV.get(2+i);
     }
 }

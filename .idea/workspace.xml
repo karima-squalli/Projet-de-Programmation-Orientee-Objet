@@ -5,23 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ec59de7-7626-4880-91bc-3f1a6f4b19d2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pg220_/logic/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pg220_/logic/Date.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pg220_/logic/Dimensions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pg220_/logic/Fournisseur.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pg220_/logic/Panneau.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pg220_/logic/Personne.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pg220_/logic/Planche.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pg220_/logic/Prix.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entreessorties/Writer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entreessorties/Writer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entreessorties/XMLReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entreessorties/XMLReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape2/decoupe21.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape2/decoupe21.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape2/decoupe22.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape2/decoupe22.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape2/decoupe23.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape2/decoupe23.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape2/decoupe24.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape2/decoupe24.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape2/decoupe25.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape2/decoupe25.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape2/decoupe26.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape2/decoupe26.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape2/decoupe27.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape2/decoupe27.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape2/decoupe28.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape2/decoupe28.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape2/decoupe29.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape2/decoupe29.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape2/decoupe30.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape2/decoupe30.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape2/decoupe36.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape2/decoupe36.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape2/decoupe37.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape2/decoupe37.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape2/decoupe38.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape2/decoupe38.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape2/decoupe39.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape2/decoupe39.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape2/decoupe40.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape2/decoupe40.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape2/decoupe41.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape2/decoupe41.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape2/decoupe42.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape2/decoupe42.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape2/decoupe43.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape2/decoupe43.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape2/decoupe44.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape2/decoupe44.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/etape2/decoupes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape2/decoupes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/etape2/exemple.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape2/exemple.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape2/exemple.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape3/fournisseurs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape3/fournisseurs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logic/Algorithme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Algorithme.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Test2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Test2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/Bois.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Bois.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/Dimensions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Dimensions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/MainEtape2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/MainEtape2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/Personne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Personne.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,11 +75,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1639067983692</updated>
-      <workItem from="1639067987588" duration="13398000" />
+      <workItem from="1639067987588" duration="24052000" />
+      <workItem from="1639163359760" duration="33118000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

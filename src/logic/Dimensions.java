@@ -6,6 +6,8 @@ public class Dimensions implements Validable,Comparable {
     private String largeurString;
     private int longueur;
     private int largeur;
+    private int longueurInitiale;
+    private int largeurInitiale;
 
     public Dimensions(String longueurString, String largeurString) {
         this.longueurString = longueurString;
@@ -21,24 +23,44 @@ public class Dimensions implements Validable,Comparable {
 
         longueur = (int)Double.parseDouble(longueurString);
         largeur = (int)Double.parseDouble(largeurString);
+        longueurInitiale = longueur;
+        largeurInitiale = largeur;
 
         if (longueur != Double.parseDouble(longueurString) || largeur != Double.parseDouble(largeurString)) {
             return false;
         }
-
-        if (longueur>0 && largeur>0 && longueur>=largeur)
-            return true;
-        return false;
+        return longueur > 0 && largeur > 0 && longueur >= largeur;
     }
     public Boolean toCompare(Validable v) {
         Dimensions dimensions_to_compare = (Dimensions)v;
-        if((dimensions_to_compare.longueur < longueur) || (dimensions_to_compare.largeur < largeur))
-            return false;
-        return true;
+        return (dimensions_to_compare.getLongueur() >= longueur) && (dimensions_to_compare.getLargeur() >= largeur);
     }
 
-    public String getLongueurString(){return longueurString;}
+    public String getLongueurInitialeString() {return String.format("%d.00",longueurInitiale);}
 
-    public String getLargeurString(){return largeurString;}
+    public String getLargeurInitialeString() {return String.format("%d.00",largeurInitiale);}
+
+    public void setDimensions(int longueur, int largeur) {
+        this.longueur = longueur;
+        this.largeur = largeur;
+        longueurString = String.format("%d.00",longueur);
+        largeurString = String.format("%d.00",largeur);
+    }
+
+    public int getLongueurInitiale() {
+        return longueurInitiale;
+    }
+
+    public int getLargeurInitiale() {
+        return largeurInitiale;
+    }
+
+    public int getLongueur() {
+        return longueur;
+    }
+
+    public int getLargeur() {
+        return largeur;
+    }
 
 }

@@ -8,7 +8,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import static logic.Algorithme.algorithme1;
+import static logic.Algorithme.*;
 
 public class MainEtape2 {
 
@@ -30,9 +30,9 @@ public class MainEtape2 {
         data2.add("fournisseurs");
         data2.add("fournisseur");
         ArrayList<Generable> fournisseursG = r.readGenerable(data2,"src/etape2/fournisseurs.xml", c3, c4);
-        ArrayList<Decoupe> decoupes = algorithme1(clientsG, fournisseursG);
+        ArrayList<Decoupe> decoupes = algorithme2(clientsG, fournisseursG);
 
-        try(FileOutputStream out = new FileOutputStream("src/etape2/decoupes.xml")) {
+        try(FileOutputStream out = new FileOutputStream("src/etape3/decoupes.xml")) {
             Writer writer = Writer.getWriter(0);
             ArrayList<String> data3 = new ArrayList<>();
             data3.add("decoupes");
@@ -54,6 +54,7 @@ public class MainEtape2 {
                 if (i == sizeArray-1) j = 1;
                 Decoupe decoupe = decoupes.get(i);
                 writer.writeDecoupe(j, data3, out, decoupe.getIdFournisseur(), decoupe.getIdPanneau(), decoupe.getIdClient(), decoupe.getIdPlanche(), decoupe.getX(), decoupe.getY());
+
             }
         } catch (IOException | XMLStreamException e) {
             e.printStackTrace();

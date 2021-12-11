@@ -12,10 +12,6 @@ class Fournisseur extends Personne {
         super(0);
     }
 
-    public int getNombrePanneaux() {
-        return super.getNombreP();
-    }
-
     @Override
     public void add(Generable g) {
         Panneau panneau = (Panneau)g;
