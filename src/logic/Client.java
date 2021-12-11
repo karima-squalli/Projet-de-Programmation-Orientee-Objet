@@ -19,6 +19,11 @@ class Client extends Personne {
     }
 
     @Override
+    public int getIdProprietaire() {
+        return 0;
+    }
+
+    @Override
     public void updateGenerable(ArrayList<Validable> v) {
 
     }

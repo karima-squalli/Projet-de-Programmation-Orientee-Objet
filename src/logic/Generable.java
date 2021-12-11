@@ -14,6 +14,8 @@ public interface Generable {
 
     int getNombreP();
 
+    int getIdProprietaire();
+
     void updateGenerable(ArrayList<Validable> v);
 
     Boolean checkAllValidable();

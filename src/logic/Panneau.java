@@ -2,8 +2,8 @@ package logic;
 
 class Panneau extends Bois {
 
-    public Panneau(int id, int nombre) {
-        super(id, nombre);
+    public Panneau(int id, int nombre,int idProprietaire) {
+        super(id, nombre, idProprietaire);
     }
 
 

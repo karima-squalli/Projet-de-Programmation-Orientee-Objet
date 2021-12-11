@@ -29,7 +29,7 @@ public class MainEtape2 {
         ArrayList<String> data2 = new ArrayList<>();
         data2.add("fournisseurs");
         data2.add("fournisseur");
-        ArrayList<Generable> fournisseursG = r.readGenerable(data2,"src/etape2/fournisseurs.xml", c3, c4);
+        ArrayList<Generable> fournisseursG = r.readGenerable(data2,"src/etape3/fournisseurs.xml", c3, c4);
         ArrayList<Decoupe> decoupes = algorithme2(clientsG, fournisseursG);
 
         try(FileOutputStream out = new FileOutputStream("src/etape3/decoupes.xml")) {

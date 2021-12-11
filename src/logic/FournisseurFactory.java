@@ -14,7 +14,7 @@ public class FournisseurFactory implements Factory{
     }
 
     @Override
-    public Generable generateGenerable(int id, int nombre) {
+    public Generable generateGenerable(int id, int nombre, int idProprietaire) {
         return null;
     }
 }

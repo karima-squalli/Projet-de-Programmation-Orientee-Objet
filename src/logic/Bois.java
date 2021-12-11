@@ -8,11 +8,13 @@ abstract class Bois implements Generable {
     protected int nombre;
     protected ArrayList<Validable> listV = new ArrayList<>();
     protected int nombreInitial;
+    protected int idProprietaire;
 
-    public Bois(int id, int nombre) {
+    public Bois(int id, int nombre,int idProprietaire) {
         this.id = id;
         this.nombre = nombre;
         this.nombreInitial = nombre;
+        this.idProprietaire = idProprietaire;
     }
 
     public void updateGenerable(ArrayList<Validable> v) {
@@ -40,6 +42,8 @@ abstract class Bois implements Generable {
     }
 
     public int getNombre(){return nombre;}
+
+    public int getIdProprietaire(){return idProprietaire;}
 
     public Validable getDate(){
         return listV.get(0);

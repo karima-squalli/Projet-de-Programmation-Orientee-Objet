@@ -11,8 +11,8 @@ public class PlancheFactory implements Factory {
         return null;
     }
 
-    public Generable generateGenerable(int id, int nombre) {
-        Planche planche = new Planche(id, nombre);
+    public Generable generateGenerable(int id, int nombre, int idProprietaire) {
+        Planche planche = new Planche(id, nombre, idProprietaire);
         return planche;
     }
 }

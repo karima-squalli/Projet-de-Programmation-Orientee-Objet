@@ -24,6 +24,7 @@ class XMLReader implements Reader {
             XMLStreamReader reader = xmlInFact.createXMLStreamReader(file);
 
             Generable generable = f1.generateGenerable();
+            int id = -1;
             while (reader.hasNext()) {
                 if (reader.next() == XMLStreamConstants.START_ELEMENT) {
                     String name = reader.getLocalName();
@@ -31,14 +32,15 @@ class XMLReader implements Reader {
                     if (name == data.get(0) || name == data.get(1)){
                         if (name == data.get(0)) reader.nextTag();
                         if (name == data.get(1)) generables.add(generable);
-                        generable = f1.generateGenerable(Integer.parseInt(reader.getAttributeValue(0)));
+                        id = Integer.parseInt(reader.getAttributeValue(0));
+                        generable = f1.generateGenerable(id);
                         reader.nextTag();
                     }
 
                     ArrayList<Validable> listV = new ArrayList<>();
 
                     int nombre = Integer.parseInt(reader.getAttributeValue(1));
-                    Generable g = f2.generateGenerable(Integer.parseInt(reader.getAttributeValue(0)), nombre);
+                    Generable g = f2.generateGenerable(Integer.parseInt(reader.getAttributeValue(0)), nombre, id);
 
                     Date date = new Date(reader.getAttributeValue(2));
                     Prix prix = new Prix(reader.getAttributeValue(3));
