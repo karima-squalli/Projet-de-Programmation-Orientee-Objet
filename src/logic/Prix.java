@@ -2,12 +2,13 @@ package logic;
 
 public class Prix implements Validable,Comparable{
 
-    String prixString;
-    double prix;
+    private final String prixString;
+    private double prix;
 
     public Prix(String prixString) {
         this.prixString = prixString;
     }
+
     @Override
     public Boolean isValid() {
 
@@ -15,17 +16,15 @@ public class Prix implements Validable,Comparable{
             return false;
         }
         prix = Double.parseDouble(prixString);
-        if (prix < 0) {
-            return false;
-        }
-        return true;
+
+        return !(prix < 0);
     }
+
     public Boolean toCompare(Validable v) {
         Prix prix_to_compare = (Prix)v;
-        if(prix_to_compare.prix>prix)
-            return false;
-        return true;
+        return !(prix_to_compare.prix > prix);
     }
+
     String getPrixString(){
         return prixString;
     }

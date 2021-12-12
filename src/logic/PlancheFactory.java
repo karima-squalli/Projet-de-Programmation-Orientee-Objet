@@ -1,6 +1,7 @@
 package logic;
 
 public class PlancheFactory implements Factory {
+
     @Override
     public Generable generateGenerable() {
         return null;
@@ -11,8 +12,8 @@ public class PlancheFactory implements Factory {
         return null;
     }
 
+    @Override
     public Generable generateGenerable(int id, int nombre, int idProprietaire) {
-        Planche planche = new Planche(id, nombre, idProprietaire);
-        return planche;
+        return new Planche(id, nombre, idProprietaire);
     }
 }

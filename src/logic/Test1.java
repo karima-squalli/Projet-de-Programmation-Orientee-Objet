@@ -1,11 +1,8 @@
 package logic;
 
 import entreessorties.Reader;
-// import entreessorties.XMLReader;
-import logic.*;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import static logic.Algorithme.algorithme1;
 
@@ -38,13 +35,13 @@ public class Test1
         for (Generable clientG : clientsG) {
             System.out.printf("\nLe client numéro %d effectue %d commandes.\n", clientG.getId(), clientG.getNombreP()); // comment savoir si c client ou fournisseur
             for (int j = 0; j < clientG.getTailleCourante(); j++) {
-                //Factory pf = new PlancheFactory();
+
                 Generable pg = clientG.getBois(j);
                 Planche planche = (Planche)pg;
                 Prix prix = (Prix)planche.getPrix();
                 Date date = (Date)planche.getDate();
                 System.out.println("id de planche : " + planche.getId() + "nombre : " + planche.getNombre() + " prix " + prix.getPrixString() + " date " + date.getDate());
-                //RectangleDeBois planche = clientG.getBois(j);
+
                 if (planche.checkAllValidable()) {
                     System.out.printf("Commande numéro %d valide.\n", j);
                 } else

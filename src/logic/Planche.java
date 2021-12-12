@@ -6,26 +6,4 @@ class Planche extends Bois {
         super(id, nombre,idProprietaire);
     }
 
-
-    @Override
-    public void add(Generable g) {
-
-    }
-
-    @Override
-    public int getTailleCourante() {
-        return 0;
-    }
-
-    @Override
-    public Bois getBois(int j) {
-        return null;
-    }
-
-    @Override
-    public int getNombreP() {
-        return 0;
-    }
-
-
 }

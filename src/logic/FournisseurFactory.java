@@ -1,6 +1,7 @@
 package logic;
 
-public class FournisseurFactory implements Factory{
+public class FournisseurFactory implements Factory {
+
     @Override
     public Generable generateGenerable() {
         Fournisseur fournisseur= new Fournisseur();

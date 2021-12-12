@@ -5,7 +5,8 @@ import java.time.format.DateTimeFormatter;
 
 
 public class Date implements Validable,Comparable {
-    String date;
+
+    private String date;
     private int day;
     private int month;
     private int year;

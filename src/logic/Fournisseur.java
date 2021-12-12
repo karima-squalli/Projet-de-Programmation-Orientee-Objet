@@ -1,6 +1,5 @@
 package logic;
 
-import java.util.ArrayList;
 
 class Fournisseur extends Personne {
 
@@ -16,19 +15,5 @@ class Fournisseur extends Personne {
     public void add(Generable g) {
         Panneau panneau = (Panneau)g;
         super.add(panneau);
-    }
-
-    @Override
-    public int getIdProprietaire() {
-        return 0;
-    }
-
-    @Override
-    public void updateGenerable(ArrayList<Validable> v) {
-    }
-
-    @Override
-    public Boolean checkAllValidable() {
-        return null;
     }
 }

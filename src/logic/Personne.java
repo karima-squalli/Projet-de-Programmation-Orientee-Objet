@@ -1,8 +1,10 @@
 package logic;
 
+import java.util.ArrayList;
+
 abstract class Personne implements Generable, Validable{
 
-    private int id;
+    private final int id;
     private int nombreP;
     private int tailleCourante = 0;
     private int tailleMaximale = 10;
@@ -19,8 +21,7 @@ abstract class Personne implements Generable, Validable{
             tailleMaximale = tailleMaximale * 2;
             Bois[] tmp = bois.clone();
             bois = new Bois[tailleMaximale];
-            for (int i = 0; i < tailleCourante; i++)
-                bois[i] = tmp[i];
+            if (tailleCourante >= 0) System.arraycopy(tmp, 0, bois, 0, tailleCourante);
         }
         bois[tailleCourante] = element;
         tailleCourante++;
@@ -33,12 +34,8 @@ abstract class Personne implements Generable, Validable{
             if (bois[i] == elementToBeDeleted) {
 
                 newBois = new Bois[bois.length - 1];
-                for (int index = 0; index < i; index++) {
-                    newBois[index] = bois[index];
-                }
-                for (int j = i; j < bois.length - 1; j++) {
-                    newBois[j] = bois[j + 1];
-                }
+                System.arraycopy(bois, 0, newBois, 0, i);
+                if (bois.length - 1 - i >= 0) System.arraycopy(bois, i + 1, newBois, i, bois.length - 1 - i);
 
                 break;
             }
@@ -75,8 +72,20 @@ abstract class Personne implements Generable, Validable{
                 l--;
             }
         }
-        if (tailleCourante == 0)
-            return false;
-        return true;
+        return tailleCourante != 0;
+    }
+
+    public int getIdProprietaire() {
+        return 0;
+    }
+
+    @Override
+    public void updateGenerable(ArrayList<Validable> v) {
+
+    }
+
+    @Override
+    public Boolean checkAllValidable() {
+        return null;
     }
 }

@@ -32,10 +32,10 @@ public class MainEtape2 {
         data2.add("fournisseurs");
         data2.add("fournisseur");
         ArrayList<Generable> fournisseursG = r.readGenerable(data2,"src/etape2/fournisseurs.xml", c3, c4);
-        ArrayList<Decoupe> decoupes = algorithme1(clientsG, fournisseursG);
+        ArrayList<Decoupe> decoupes = algorithme2(clientsG, fournisseursG);
 
 
-        try(FileOutputStream out = new FileOutputStream("src/etape2/decoupes.xml")) {
+        try(FileOutputStream out = new FileOutputStream("src/etape3/decoupes.xml")) {
             Writer writer = Writer.getWriter(0);
             ArrayList<String> data3 = new ArrayList<>();
             data3.add("decoupes");
@@ -58,7 +58,7 @@ public class MainEtape2 {
                 Decoupe decoupe = decoupes.get(i);
                 writer.writeDecoupe(j, data3, out, decoupe.getIdFournisseur(), decoupe.getIdPanneau(), decoupe.getIdClient(), decoupe.getIdPlanche(), decoupe.getX(), decoupe.getY());
             }
-            writeSvg(1, decoupes);
+            writeSvg(2, decoupes);
         } catch (IOException | XMLStreamException e) {
             e.printStackTrace();
         }
@@ -83,8 +83,8 @@ public class MainEtape2 {
                 for (int j=0; j<decoupes.size(); j++) {
 
                     Decoupe decoupe1 = decoupes.get(j);
-                    if (idPanneau.equals(decoupe1.getIdPanneau()) && idFournisseur == decoupe1.getIdFournisseur()) { // ADD && meme idFournisseur !!
-                        //System.out.println("we re at if");
+                    if (idPanneau.equals(decoupe1.getIdPanneau()) && idFournisseur == decoupe1.getIdFournisseur()) {
+
                         String decoupeVerticale1 = String.format("<line x1=\"%s\" y1=\"%s\" x2=\"%s\" y2=\"%s\" style=\"stroke:rgb(255,0,0);stroke-width:2\" />", decoupe1.getX() , decoupe1.getY1(), decoupe1.getX(), decoupe1.getY());
                         String decoupeHorizontale1 = String.format("<line x1=\"%s\" y1=\"%s\" x2=\"%s\" y2=\"%s\" style=\"stroke:rgb(255,0,0);stroke-width:2\" />", decoupe1.getX1(), decoupe1.getY(),decoupe1.getX(),decoupe1.getY());
                         String decoupeVerticale2 = String.format("<line x1=\"%s\" y1=\"%s\" x2=\"%s\" y2=\"%s\" style=\"stroke:rgb(255,0,0);stroke-width:2\" />", decoupe1.getX1(), decoupe1.getY1(), decoupe1.getX1(), decoupe1.getY());

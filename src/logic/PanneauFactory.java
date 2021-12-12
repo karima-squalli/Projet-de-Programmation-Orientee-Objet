@@ -15,7 +15,6 @@ public class PanneauFactory implements Factory {
 
     @Override
     public Generable generateGenerable(int id, int nombre, int idProprietaire) {
-        Panneau panneau = new Panneau(id, nombre, idProprietaire);
-        return panneau;
+        return new Panneau(id, nombre, idProprietaire);
     }
 }

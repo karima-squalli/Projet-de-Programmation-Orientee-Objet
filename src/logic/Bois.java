@@ -10,7 +10,7 @@ abstract class Bois implements Generable {
     protected int nombreInitial;
     protected int idProprietaire;
 
-    public Bois(int id, int nombre,int idProprietaire) {
+    Bois(int id, int nombre,int idProprietaire) {
         this.id = id;
         this.nombre = nombre;
         this.nombreInitial = nombre;
@@ -30,34 +30,54 @@ abstract class Bois implements Generable {
         return true;
     }
 
-    public void setNombre(int nombre) {
+    void setNombre(int nombre) {
         this.nombre = nombre;
     }
 
-    public int getNombreInitial() {
+    int getNombreInitial() {
         return nombreInitial;
     }
     public int getId(){
         return id;
     }
 
-    public int getNombre(){return nombre;}
+    int getNombre(){return nombre;}
 
     public int getIdProprietaire(){return idProprietaire;}
 
-    public Validable getDate(){
+    Validable getDate(){
         return listV.get(0);
     }
 
-    public Validable getPrix(){
+    Validable getPrix(){
         return listV.get(1);
     }
 
-    public Validable getDimensions(){
+    Validable getDimensions(){
         return listV.get(2);
     }
 
-    public Validable getDimensions(int i) {
+    Validable getDimensions(int i) {
         return listV.get(2+i);
+    }
+
+    @Override
+    public void add(Generable g) {
+
+    }
+
+    @Override
+    public int getTailleCourante() {
+        return 0;
+    }
+
+    @Override
+    public Bois getBois(int j) {
+        return null;
+    }
+
+    @Override
+    public int getNombreP() {
+        return 0;
     }
 }

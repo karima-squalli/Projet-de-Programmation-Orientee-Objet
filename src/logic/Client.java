@@ -1,7 +1,5 @@
 package logic;
 
-import java.util.ArrayList;
-
 class Client extends Personne {
 
     Client() {
@@ -16,20 +14,5 @@ class Client extends Personne {
     public void add(Generable g) {
         Planche planche = (Planche)g;
         super.add(planche);
-    }
-
-    @Override
-    public int getIdProprietaire() {
-        return 0;
-    }
-
-    @Override
-    public void updateGenerable(ArrayList<Validable> v) {
-
-    }
-
-    @Override
-    public Boolean checkAllValidable() {
-        return null;
     }
 }

@@ -36,30 +36,30 @@ public class Dimensions implements Validable,Comparable {
         return (dimensions_to_compare.getLongueur() >= longueur) && (dimensions_to_compare.getLargeur() >= largeur);
     }
 
-    public String getLongueurInitialeString() {return String.format("%d.00",longueurInitiale);}
+    String getLongueurInitialeString() {return String.format("%d.00",longueurInitiale);}
 
-    public String getLargeurInitialeString() {return String.format("%d.00",largeurInitiale);}
+    String getLargeurInitialeString() {return String.format("%d.00",largeurInitiale);}
 
-    public void setDimensions(int longueur, int largeur) {
+    void setDimensions(int longueur, int largeur) {
         this.longueur = longueur;
         this.largeur = largeur;
         longueurString = String.format("%d.00",longueur);
         largeurString = String.format("%d.00",largeur);
     }
 
-    public int getLongueurInitiale() {
+    int getLongueurInitiale() {
         return longueurInitiale;
     }
 
-    public int getLargeurInitiale() {
+    int getLargeurInitiale() {
         return largeurInitiale;
     }
 
-    public int getLongueur() {
+    int getLongueur() {
         return longueur;
     }
 
-    public int getLargeur() {
+    int getLargeur() {
         return largeur;
     }
 
