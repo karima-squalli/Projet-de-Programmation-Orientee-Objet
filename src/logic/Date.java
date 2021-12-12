@@ -40,10 +40,7 @@ public class Date implements Validable,Comparable {
         int current_month = Integer.parseInt(current_date.substring(3,5));
         int current_year = Integer.parseInt(current_date.substring(6,8));
 
-        if(year<current_year || (month<current_month && year==current_year) || (day<current_day && month==current_month)) {
-            return false;
-        }
-        return true;
+        return year >= current_year && (month >= current_month || year != current_year) && (day >= current_day || month != current_month);
     }
 
     public Boolean toCompare(Validable v) {
@@ -57,13 +54,9 @@ public class Date implements Validable,Comparable {
         int month = Integer.parseInt(date.substring(3,5));
         int year = Integer.parseInt(date.substring(6,8));
 
-        if((year_to_compare > year) || (year_to_compare == year && month_to_compare >month) || (year_to_compare == year && month_to_compare==month && day_to_compare>day))
-            return false;
-        return true;
+        return (year_to_compare <= year) && (year_to_compare != year || month_to_compare <= month) && (year_to_compare != year || month_to_compare != month || day_to_compare <= day);
     }
     String getDate(){
         return date;
     }
-    // dans XMLReader new Date client.addValidable(date) etc
-    // entreesorties : interface Reader et XMLReader l implémente (readclientfrom(Readable) et .. et Readable aussi interface ou classe abtraite  - demander au prof  a quoi sert interface readable
 }

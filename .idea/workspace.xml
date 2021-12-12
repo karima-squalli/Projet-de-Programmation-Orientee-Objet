@@ -4,40 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ec59de7-7626-4880-91bc-3f1a6f4b19d2" name="Changes" comment="">
+    <list default="true" id="d949143c-3fae-4daa-a2f4-c2fbd89a7180" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entreessorties/XMLReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entreessorties/XMLReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape2/decoupes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape2/decoupes.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/etape3/decoupes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape3/decoupes.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logic/Algorithme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Algorithme.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Bois.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Bois.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/ClientFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/ClientFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Factory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Fournisseur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Fournisseur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/FournisseurFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/FournisseurFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Generable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Generable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/Comparable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Comparable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/Date.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Date.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/Decoupe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Decoupe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logic/MainEtape2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/MainEtape2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Panneau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Panneau.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/PanneauFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/PanneauFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Planche.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Planche.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/PlancheFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/PlancheFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="223Yx1HivQEZEBtDlmDdMCAGK3Z" />
+  <component name="ProjectId" id="229ykTGBBJk7HyEiv3U7gnsahA9" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -46,15 +31,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RunManager">
-    <configuration name="Main2" type="Application" factoryName="Application">
+    <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="logic.MainEtape2" />
       <module name="pg220-2021-ksquallihou_owankida" />
       <method v="2">
@@ -65,17 +48,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0ec59de7-7626-4880-91bc-3f1a6f4b19d2" name="Changes" comment="" />
-      <created>1639067983692</created>
+      <changelist id="d949143c-3fae-4daa-a2f4-c2fbd89a7180" name="Changes" comment="" />
+      <created>1639264242367</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1639067983692</updated>
-      <workItem from="1639067987588" duration="13398000" />
-      <workItem from="1639153116674" duration="4381000" />
-      <workItem from="1639237000369" duration="480000" />
-      <workItem from="1639252362887" duration="498000" />
-      <workItem from="1639252882431" duration="32000" />
-      <workItem from="1639252938327" duration="10416000" />
+      <updated>1639264242367</updated>
+      <workItem from="1639264243864" duration="6325000" />
     </task>
     <servers />
   </component>
