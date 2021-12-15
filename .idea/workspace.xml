@@ -6,11 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="d949143c-3fae-4daa-a2f4-c2fbd89a7180" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entreessorties/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entreessorties/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entreessorties/XMLReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entreessorties/XMLReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/etape2/decoupes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape2/decoupes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape2/fournisseurs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape2/fournisseurs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/etape3/decoupes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape3/decoupes.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logic/Algorithme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Algorithme.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Comparable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Comparable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Date.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Date.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logic/Decoupe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Decoupe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logic/MainEtape2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/MainEtape2.java" afterDir="false" />
     </list>
@@ -31,6 +32,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="create.test.in.the.same.root" value="true" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -53,7 +55,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1639264242367</updated>
-      <workItem from="1639264243864" duration="6325000" />
+      <workItem from="1639264243864" duration="11338000" />
+      <workItem from="1639524380149" duration="14027000" />
     </task>
     <servers />
   </component>

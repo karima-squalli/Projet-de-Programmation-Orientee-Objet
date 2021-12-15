@@ -72,41 +72,6 @@ public class Algorithme {
 
     // ========================================================= ALGORITHME 2 ==============================================================================================================
 
-
-    public static ArrayList<Bois> tableauPlanche(ArrayList<Client> clients){
-        ArrayList<Bois> planches = new ArrayList<>();
-
-        for (Client client : clients) {
-            for (int i = 0; i < client.getTailleCourante(); i++) {
-                planches.add(client.getBois(i));
-            }
-        }
-        return planches;
-    }
-
-    public static Bois plancheDeLongueurMax(ArrayList<Bois> planches){
-        Bois max = planches.get(0);
-        for(int i=1;i<planches.size();i++){
-            Dimensions dimensions = (Dimensions)planches.get(i).getDimensions();
-            Dimensions dimensionsMax = (Dimensions)max.getDimensions();
-            if(dimensions.getLongueur()>dimensionsMax.getLongueur())
-                max=planches.get(i);
-        }
-        return max;
-    }
-
-    public static ArrayList<Bois> trierPlanches(ArrayList<Bois> planches){
-        int size = planches.size();
-        ArrayList<Bois> planchesTriees = new ArrayList<>();
-        while(planchesTriees.size() != size){
-            Bois max = plancheDeLongueurMax(planches);
-            planchesTriees.add(max);
-            planches.remove(max);
-
-        }
-        return planchesTriees;
-    }
-
     public static ArrayList<Decoupe> algorithme2(ArrayList<Generable> clientsGenerable, ArrayList<Generable> fournisseursGenerable) {
 
         numDecoupe = 1;
@@ -177,6 +142,177 @@ public class Algorithme {
     }
 
     // =======================================================FIN ALGORITHME 2 ==============================================================================================================
+
+    // ========================================================= ALGORITHME 3 ==============================================================================================================
+
+    public static ArrayList<Decoupe> algorithme3(ArrayList<Generable> clientsGenerable, ArrayList<Generable> fournisseursGenerable) {
+
+        numDecoupe = 1;
+        numAlgorithme = 3;
+
+        ArrayList<Decoupe> decoupes = new ArrayList<>();
+        ArrayList<Client> clients = new ArrayList<>();
+        ArrayList<Fournisseur> fournisseurs = new ArrayList<>();
+
+
+        for (Generable clientGenerable : clientsGenerable) {
+
+            Client client = (Client) clientGenerable;
+            if (client.isValid())
+                clients.add(client);
+        }
+        for (Generable fournisseurGenerable : fournisseursGenerable) {
+
+            Fournisseur fournisseur = (Fournisseur) fournisseurGenerable;
+            if (fournisseur.isValid())
+                fournisseurs.add(fournisseur);
+        }
+        ArrayList<Bois> tableauDePlanches = tableauPlanche(clients);
+        ArrayList<Bois> tableauDePlancheTrie = trierPlanchesLargeur(tableauDePlanches);
+
+        System.out.println("taille = " + tableauDePlancheTrie.size()) ;
+
+        int longueurInt;
+        for (int i=0; i<tableauDePlancheTrie.size(); i++) {
+            Bois bois = tableauDePlancheTrie.get(i); // make this return planche
+            Planche planche = (Planche) bois;
+            System.out.printf("\n\n\n===============================Commande n° %d à traiter du client %d=======================================\n", planche.getId(), planche.getIdProprietaire());
+
+            int nombrePlanches = planche.getNombre();
+            Date datePlanche = (Date) planche.getDate();
+            Dimensions dimensionsPlanche = (Dimensions) planche.getDimensions();
+
+            for (int j = 0; j < nombrePlanches; j++) {
+
+                for (int s = 0; s < fournisseurs.size(); s++) {
+                    Fournisseur fournisseur = fournisseurs.get(s);
+                    for (int l = 0; l < fournisseur.getTailleCourante(); l++) {
+
+                        Generable panneauGenerable = fournisseur.getBois(l);
+                        Panneau panneau = (Panneau) panneauGenerable;
+
+                        int nombrePanneaux = panneau.getNombre();
+                        Date datePanneau = (Date) panneau.getDate();
+
+                        if (datePlanche.toCompare(datePanneau)) {
+                            for (int k = 0; k < nombrePanneaux; k++) {
+
+
+                                Dimensions dimensionsPanneau = (Dimensions) panneau.getDimensions(k);
+
+                                if (dimensionsPlanche.toCompare(dimensionsPanneau)) {
+                                    System.out.println("_______________________________________________________");
+
+                                    decouper(decoupes, dimensionsPlanche, planche, panneau, planche.getNombreInitial() - planche.getNombre() + j, k, bois.getIdProprietaire(), fournisseur, dimensionsPanneau);
+
+                                    dimensionsPanneau.setDimensions(dimensionsPanneau.getLongueur() , dimensionsPanneau.getLargeur() - dimensionsPlanche.getLargeur());
+                                    longueurInt = dimensionsPlanche.getLongueur();
+                                    planche.setNombre(planche.getNombre()-1);
+                                    System.out.println("nombre de planches restantes == " + planche.getNombre());
+                                    if (planche.getNombre() == 0) {
+                                        tableauDePlancheTrie.remove(bois);
+                                    }
+
+                                    for (int m = 0; m < tableauDePlancheTrie.size(); m++) {
+
+                                        Bois bois1 = tableauDePlancheTrie.get(m);
+                                        Planche planche1 = (Planche) bois1;
+                                        int nombrePlanche1 = planche1.getNombre();
+
+                                        for (int t=0; t<nombrePlanche1; t++) {
+
+                                            Date datePlanche1 = (Date) planche1.getDate();
+                                            Dimensions dimensionsPlanche1 = (Dimensions) planche1.getDimensions();
+                                            if (datePlanche1.toCompare(datePanneau) && dimensionsPlanche1.toCompare(dimensionsPanneau) && dimensionsPlanche1.getLongueur() <= longueurInt) {
+                                                decouper(decoupes, dimensionsPlanche1, planche1, panneau, planche1.getNombreInitial() - planche1.getNombre() + t, k, planche1.getIdProprietaire(), fournisseur, dimensionsPanneau);
+                                                dimensionsPanneau.setDimensions(dimensionsPanneau.getLongueur(), dimensionsPanneau.getLargeur() - dimensionsPlanche1.getLargeur());
+                                                planche1.setNombre(planche1.getNombre() - 1);
+
+                                                System.out.println("nombre de planches restantes == " + planche1.getNombre());
+                                                if (planche1.getNombre() == 0) {
+                                                    tableauDePlancheTrie.remove(bois1);
+                                                    m--;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    dimensionsPanneau.setDimensions(dimensionsPanneau.getLongueur()-longueurInt, dimensionsPanneau.getLargeurInitiale());
+
+                                    k = nombrePanneaux;
+                                    l = fournisseur.getTailleCourante();
+                                    s = fournisseurs.size();
+                                    j = nombrePlanches;
+                                    i = 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        return decoupes;
+    }
+
+    // =======================================================FIN ALGORITHME 3 ==============================================================================================================
+
+    public static ArrayList<Bois> tableauPlanche(ArrayList<Client> clients){
+        ArrayList<Bois> planches = new ArrayList<>();
+
+        for (Client client : clients) {
+            for (int i = 0; i < client.getTailleCourante(); i++) {
+                planches.add(client.getBois(i));
+            }
+        }
+        return planches;
+    }
+
+    public static Bois plancheDeLongueurMax(ArrayList<Bois> planches){
+        Bois max = planches.get(0);
+        for(int i=1;i<planches.size();i++){
+            Dimensions dimensions = (Dimensions)planches.get(i).getDimensions();
+            Dimensions dimensionsMax = (Dimensions)max.getDimensions();
+            if(dimensions.getLongueur()>dimensionsMax.getLongueur())
+                max=planches.get(i);
+        }
+        return max;
+    }
+
+    public static ArrayList<Bois> trierPlanches(ArrayList<Bois> planches){
+        int size = planches.size();
+        ArrayList<Bois> planchesTriees = new ArrayList<>();
+        while(planchesTriees.size() != size){
+            Bois max = plancheDeLongueurMax(planches);
+            planchesTriees.add(max);
+            planches.remove(max);
+
+        }
+        return planchesTriees;
+    }
+
+    public static Bois plancheDeLargeurMax(ArrayList<Bois> planches){
+        Bois max = planches.get(0);
+        for(int i=1;i<planches.size();i++){
+            Dimensions dimensions = (Dimensions)planches.get(i).getDimensions();
+            Dimensions dimensionsMax = (Dimensions)max.getDimensions();
+            if(dimensions.getLargeur()>dimensionsMax.getLargeur())
+                max=planches.get(i);
+        }
+        return max;
+    }
+
+    public static ArrayList<Bois> trierPlanchesLargeur(ArrayList<Bois> planches){
+        int size = planches.size();
+        ArrayList<Bois> planchesTriees = new ArrayList<>();
+        while(planchesTriees.size() != size){
+            Bois max = plancheDeLargeurMax(planches);
+            planchesTriees.add(max);
+            planches.remove(max);
+
+        }
+        return planchesTriees;
+    }
 
     public static void decouper(ArrayList<Decoupe>decoupes, Dimensions dimensionsPlanche, Planche planche, Panneau panneau, int k, int l, int idClient, Fournisseur fournisseur, Dimensions dimensionsPanneau) {
 

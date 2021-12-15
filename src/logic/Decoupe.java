@@ -1,6 +1,7 @@
 package logic;
 
-public class Decoupe {
+class Decoupe {
+
     private final String x;
     private final String y;
     private final String idPlanche;

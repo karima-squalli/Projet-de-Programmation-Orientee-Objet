@@ -2,6 +2,7 @@ package entreessorties;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Objects;
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamConstants;
 import javax.xml.stream.XMLStreamException;
@@ -29,9 +30,9 @@ class XMLReader implements Reader {
                 if (reader.next() == XMLStreamConstants.START_ELEMENT) {
                     String name = reader.getLocalName();
 
-                    if (name == data.get(0) || name == data.get(1)){
-                        if (name == data.get(0)) reader.nextTag();
-                        if (name == data.get(1)) generables.add(generable);
+                    if (Objects.equals(name, data.get(0)) || Objects.equals(name, data.get(1))){
+                        if (Objects.equals(name, data.get(0))) reader.nextTag();
+                        if (Objects.equals(name, data.get(1))) generables.add(generable);
                         id = Integer.parseInt(reader.getAttributeValue(0));
                         generable = f1.generateGenerable(id);
                         reader.nextTag();

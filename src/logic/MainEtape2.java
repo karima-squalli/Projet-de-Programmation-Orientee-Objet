@@ -32,7 +32,7 @@ public class MainEtape2 {
         data2.add("fournisseurs");
         data2.add("fournisseur");
         ArrayList<Generable> fournisseursG = r.readGenerable(data2,"src/etape2/fournisseurs.xml", c3, c4);
-        ArrayList<Decoupe> decoupes = algorithme2(clientsG, fournisseursG);
+        ArrayList<Decoupe> decoupes = algorithme3(clientsG, fournisseursG);
 
 
         try(FileOutputStream out = new FileOutputStream("src/etape3/decoupes.xml")) {
@@ -73,7 +73,7 @@ public class MainEtape2 {
                 Decoupe decoupe = decoupes.get(i);
                 String idPanneau = decoupe.getIdPanneau();
                 int idFournisseur = decoupe.getIdFournisseur();
-                String filePath = String.format("src/etape%d/decoupe%d.svg",numAlgo+1, compteur);
+                String filePath = String.format("src/etape%d/decoupe_%d.svg",numAlgo+1, compteur);
                 PrintWriter pw = new PrintWriter(filePath);
                 pw.println("<svg xmlns=\"http://www.w3.org/2000/svg\"");
                 String svg = String.format(" version=\"1.1\" width=\"360\" height=\"%d\">", (int)Double.parseDouble(decoupe.getLongueur()) + 30);
@@ -85,6 +85,14 @@ public class MainEtape2 {
                     Decoupe decoupe1 = decoupes.get(j);
                     if (idPanneau.equals(decoupe1.getIdPanneau()) && idFournisseur == decoupe1.getIdFournisseur()) {
 
+                        String xrect = decoupe1.getX1();
+                        String yrect = decoupe1.getY1();
+                        int height = -(int)Double.parseDouble(decoupe1.getY1()) + (int)Double.parseDouble(decoupe1.getY());
+                        int width = -(int)Double.parseDouble(decoupe1.getX1()) + (int)Double.parseDouble(decoupe1.getX());
+
+                        String planche = String.format("<rect x=\"%s\" y=\"%s\"  width=\"%d\" height=\"%d\" style=\"fill:rgb(119,181,254)\" />", xrect, yrect, width, height);
+                        //String panneau = String.format("<rect width=\"%s\" height=\"%s\" style=\"fill:rgb(88,41,0)\" />", decoupe.getLargeur(), decoupe.getLongueur());
+                        pw.println(planche);
                         String decoupeVerticale1 = String.format("<line x1=\"%s\" y1=\"%s\" x2=\"%s\" y2=\"%s\" style=\"stroke:rgb(255,0,0);stroke-width:2\" />", decoupe1.getX() , decoupe1.getY1(), decoupe1.getX(), decoupe1.getY());
                         String decoupeHorizontale1 = String.format("<line x1=\"%s\" y1=\"%s\" x2=\"%s\" y2=\"%s\" style=\"stroke:rgb(255,0,0);stroke-width:2\" />", decoupe1.getX1(), decoupe1.getY(),decoupe1.getX(),decoupe1.getY());
                         String decoupeVerticale2 = String.format("<line x1=\"%s\" y1=\"%s\" x2=\"%s\" y2=\"%s\" style=\"stroke:rgb(255,0,0);stroke-width:2\" />", decoupe1.getX1(), decoupe1.getY1(), decoupe1.getX1(), decoupe1.getY());
