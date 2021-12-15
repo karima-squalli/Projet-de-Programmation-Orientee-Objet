@@ -1,6 +1,6 @@
 package logic;
 
-public class PanneauFactory implements Factory {
+public class PanelFactory implements Factory {
 
 
     @Override
@@ -14,7 +14,7 @@ public class PanneauFactory implements Factory {
     }
 
     @Override
-    public Generable generateGenerable(int id, int nombre, int idProprietaire) {
-        return new Panneau(id, nombre, idProprietaire);
+    public Generable generateGenerable(int id, int number, int idOwner) {
+        return new Panel(id, number, idOwner);
     }
 }

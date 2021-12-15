@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 class XMLWriter implements Writer {
 
-    public void writeDecoupe(int doc, ArrayList<String>data, FileOutputStream out, int idFournisseur, String panneau, int idClient, String planche, String x, String y) throws XMLStreamException {
+    public void writeCut(int doc, ArrayList<String>data, FileOutputStream out, int idProvider, String panel, int idClient, String board, String x, String y) throws XMLStreamException {
 
         XMLOutputFactory output = XMLOutputFactory.newInstance();
         XMLStreamWriter writer = output.createXMLStreamWriter(out);
@@ -20,11 +20,11 @@ class XMLWriter implements Writer {
 
         writer.writeEmptyElement(data.get(2));
         writer.writeAttribute(data.get(3), String.valueOf(idClient));
-        writer.writeAttribute(data.get(4), planche);
+        writer.writeAttribute(data.get(4), board);
 
         writer.writeEmptyElement(data.get(5));
-        writer.writeAttribute(data.get(3), String.valueOf(idFournisseur));
-        writer.writeAttribute(data.get(6), panneau);
+        writer.writeAttribute(data.get(3), String.valueOf(idProvider));
+        writer.writeAttribute(data.get(6), panel);
 
         writer.writeEmptyElement(data.get(7));
         writer.writeAttribute(data.get(8), x);

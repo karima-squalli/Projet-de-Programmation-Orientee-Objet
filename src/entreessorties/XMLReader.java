@@ -40,17 +40,15 @@ class XMLReader implements Reader {
 
                     ArrayList<Validable> listV = new ArrayList<>();
 
-                    int nombre = Integer.parseInt(reader.getAttributeValue(1));
-                    Generable g = f2.generateGenerable(Integer.parseInt(reader.getAttributeValue(0)), nombre, id);
+                    int number = Integer.parseInt(reader.getAttributeValue(1));
+                    Generable g = f2.generateGenerable(Integer.parseInt(reader.getAttributeValue(0)), number, id);
 
                     Date date = new Date(reader.getAttributeValue(2));
-                    Prix prix = new Prix(reader.getAttributeValue(3));
-                    reader.nextTag(); // On regarde les dimensions
-                    //Dimensions dimensions = new Dimensions(reader.getAttributeValue(0),reader.getAttributeValue(1));
+                    Price price = new Price(reader.getAttributeValue(3));
+                    reader.nextTag(); // To get the dimensions
                     listV.add(date);
-                    listV.add(prix);
-                    //Dimensions dimensions =  new Dimensions(reader.getAttributeValue(0),reader.getAttributeValue(1));
-                    for (int i = 0; i<nombre; i++) {
+                    listV.add(price);
+                    for (int i = 0; i<number; i++) {
                         Dimensions dimensions = new Dimensions(reader.getAttributeValue(0), reader.getAttributeValue(1));
                         listV.add(dimensions);
                     }

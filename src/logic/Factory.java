@@ -6,5 +6,5 @@ public interface Factory {
 
     Generable generateGenerable(int id);
 
-    Generable generateGenerable(int id, int nombre, int idProprietaire);
+    Generable generateGenerable(int id, int number, int idOwner);
 }

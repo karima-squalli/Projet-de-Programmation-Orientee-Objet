@@ -2,19 +2,19 @@ package logic;
 
 import java.util.ArrayList;
 
-abstract class Bois implements Generable {
+abstract class Wood implements Generable {
 
     protected int id;
-    protected int nombre;
+    protected int number;
     protected ArrayList<Validable> listV = new ArrayList<>();
-    protected int nombreInitial;
-    protected int idProprietaire;
+    protected int initialNumber;
+    protected int idOwner;
 
-    Bois(int id, int nombre,int idProprietaire) {
+    Wood(int id, int number, int idOwner) {
         this.id = id;
-        this.nombre = nombre;
-        this.nombreInitial = nombre;
-        this.idProprietaire = idProprietaire;
+        this.number = number;
+        this.initialNumber = number;
+        this.idOwner = idOwner;
     }
 
     public void updateGenerable(ArrayList<Validable> v) {
@@ -30,26 +30,26 @@ abstract class Bois implements Generable {
         return true;
     }
 
-    void setNombre(int nombre) {
-        this.nombre = nombre;
+    void setNumber(int number) {
+        this.number = number;
     }
 
-    int getNombreInitial() {
-        return nombreInitial;
+    int getInitialNumber() {
+        return initialNumber;
     }
     public int getId(){
         return id;
     }
 
-    int getNombre(){return nombre;}
+    int getNumber(){return number;}
 
-    public int getIdProprietaire(){return idProprietaire;}
+    public int getIdOwner(){return idOwner;}
 
     Validable getDate(){
         return listV.get(0);
     }
 
-    Validable getPrix(){
+    Validable getPrice(){
         return listV.get(1);
     }
 
@@ -67,17 +67,17 @@ abstract class Bois implements Generable {
     }
 
     @Override
-    public int getTailleCourante() {
+    public int getCurrentLength() {
         return 0;
     }
 
     @Override
-    public Bois getBois(int j) {
+    public Wood getWood(int j) {
         return null;
     }
 
     @Override
-    public int getNombreP() {
+    public int getWoodNumber() {
         return 0;
     }
 }

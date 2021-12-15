@@ -2,65 +2,65 @@ package logic;
 
 public class Dimensions implements Validable,Comparable {
 
-    private String longueurString;
-    private String largeurString;
-    private int longueur;
-    private int largeur;
-    private int longueurInitiale;
-    private int largeurInitiale;
+    private String lengthString;
+    private String widthString;
+    private int length;
+    private int width;
+    private int initialLength;
+    private int initialWidth;
 
-    public Dimensions(String longueurString, String largeurString) {
-        this.longueurString = longueurString;
-        this.largeurString = largeurString;
+    public Dimensions(String lengthString, String widthString) {
+        this.lengthString = lengthString;
+        this.widthString = widthString;
     }
 
     @Override
     public Boolean isValid() {
 
-        if (!isDouble(longueurString) || !isDouble(largeurString)) {
+        if (!isDouble(lengthString) || !isDouble(widthString)) {
             return false;
         }
 
-        longueur = (int)Double.parseDouble(longueurString);
-        largeur = (int)Double.parseDouble(largeurString);
-        longueurInitiale = longueur;
-        largeurInitiale = largeur;
+        length = (int)Double.parseDouble(lengthString);
+        width = (int)Double.parseDouble(widthString);
+        initialLength = length;
+        initialWidth = width;
 
-        if (longueur != Double.parseDouble(longueurString) || largeur != Double.parseDouble(largeurString)) {
+        if (length != Double.parseDouble(lengthString) || width != Double.parseDouble(widthString)) {
             return false;
         }
-        return longueur > 0 && largeur > 0 && longueur >= largeur;
+        return length > 0 && width > 0 && length >= width;
     }
     public Boolean toCompare(Validable v) {
         Dimensions dimensions_to_compare = (Dimensions)v;
-        return (dimensions_to_compare.getLongueur() >= longueur) && (dimensions_to_compare.getLargeur() >= largeur);
+        return (dimensions_to_compare.getLength() >= length) && (dimensions_to_compare.getWidth() >= width);
     }
 
-    String getLongueurInitialeString() {return String.format("%d.00",longueurInitiale);}
+    String getInitialLengthString() {return String.format("%d.00", initialLength);}
 
-    String getLargeurInitialeString() {return String.format("%d.00",largeurInitiale);}
+    String getInitialWidthString() {return String.format("%d.00", initialWidth);}
 
-    void setDimensions(int longueur, int largeur) {
-        this.longueur = longueur;
-        this.largeur = largeur;
-        longueurString = String.format("%d.00",longueur);
-        largeurString = String.format("%d.00",largeur);
+    void setDimensions(int length, int width) {
+        this.length = length;
+        this.width = width;
+        lengthString = String.format("%d.00",length);
+        widthString = String.format("%d.00",width);
     }
 
-    int getLongueurInitiale() {
-        return longueurInitiale;
+    int getInitialLength() {
+        return initialLength;
     }
 
-    int getLargeurInitiale() {
-        return largeurInitiale;
+    int getInitialWidth() {
+        return initialWidth;
     }
 
-    int getLongueur() {
-        return longueur;
+    int getLength() {
+        return length;
     }
 
-    int getLargeur() {
-        return largeur;
+    int getWidth() {
+        return width;
     }
 
 }

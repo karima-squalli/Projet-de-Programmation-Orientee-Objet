@@ -6,15 +6,15 @@ public interface Generable {
 
     void add(Generable g);
 
-    int getTailleCourante();
+    int getCurrentLength();
 
-    Bois getBois(int j);
+    Wood getWood(int j);
 
     int getId();
 
-    int getNombreP();
+    int getWoodNumber();
 
-    int getIdProprietaire();
+    int getIdOwner();
 
     void updateGenerable(ArrayList<Validable> v);
 

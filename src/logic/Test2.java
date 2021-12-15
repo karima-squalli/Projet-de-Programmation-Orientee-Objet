@@ -28,9 +28,9 @@ public class Test2 {
             data.add("y");
             data.add("/decoupes>");
             int doc = 0;
-            writer.writeDecoupe(doc, data, out, 0, "1", 0, "2.1", "10", "13");
+            writer.writeCut(doc, data, out, 0, "1", 0, "2.1", "10", "13");
             doc = 1;
-            writer.writeDecoupe(doc,data, out, 1, "3", 1, "3.2", "5", "17");
+            writer.writeCut(doc,data, out, 1, "3", 1, "3.2", "5", "17");
         } catch (IOException e) {
             e.printStackTrace();
         }

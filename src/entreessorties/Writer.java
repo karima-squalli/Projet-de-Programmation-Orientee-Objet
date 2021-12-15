@@ -13,5 +13,5 @@ public interface Writer {
         };
     }
 
-    void writeDecoupe(int doc, ArrayList<String> data, FileOutputStream out, int idFournisseur, String panneau, int idClient, String planche, String x, String y) throws XMLStreamException;
+    void writeCut(int doc, ArrayList<String> data, FileOutputStream out, int idProvider, String panel, int idClient, String board, String x, String y) throws XMLStreamException;
 }

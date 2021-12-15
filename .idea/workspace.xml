@@ -5,15 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d949143c-3fae-4daa-a2f4-c2fbd89a7180" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/SupplierFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entreessorties/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entreessorties/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entreessorties/Writer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entreessorties/Writer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entreessorties/XMLReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entreessorties/XMLReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/etape2/decoupes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape2/decoupes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/etape2/fournisseurs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape2/fournisseurs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entreessorties/XMLWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entreessorties/XMLWriter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/etape3/decoupes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape3/decoupes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Algorithme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Algorithme.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Decoupe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Decoupe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/Algorithme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Algorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/Bois.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Wood.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/ClientFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/ClientFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/Decoupe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Cut.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/Dimensions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Dimensions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Factory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/Fournisseur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Supplier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/FournisseurFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/Generable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Generable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logic/MainEtape2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/MainEtape2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/Panneau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Panel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/PanneauFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/PanelFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/Personne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/Planche.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/PlancheFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/BoardFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/Prix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Price.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Test1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/Test2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Test2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +48,10 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="create.test.in.the.same.root" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -57,10 +76,22 @@
       <updated>1639264242367</updated>
       <workItem from="1639264243864" duration="11338000" />
       <workItem from="1639524380149" duration="14027000" />
+      <workItem from="1639595174826" duration="7344000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

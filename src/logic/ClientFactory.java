@@ -13,7 +13,7 @@ public class ClientFactory implements Factory{
     }
 
     @Override
-    public Generable generateGenerable(int parseInt, int nombre, int idProprietaire) {
+    public Generable generateGenerable(int parseInt, int number, int idOwner) {
         return null;
     }
 

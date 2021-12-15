@@ -1,6 +1,6 @@
 package logic;
 
-class Client extends Personne {
+class Client extends Person {
 
     Client() {
         super(0);
@@ -12,7 +12,7 @@ class Client extends Personne {
 
     @Override
     public void add(Generable g) {
-        Planche planche = (Planche)g;
-        super.add(planche);
+        Board board = (Board)g;
+        super.add(board);
     }
 }

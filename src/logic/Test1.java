@@ -4,7 +4,7 @@ import entreessorties.Reader;
 
 import java.util.ArrayList;
 
-import static logic.Algorithme.algorithme1;
+import static logic.Algorithm.algorithm1;
 
 public class Test1
 {
@@ -17,9 +17,9 @@ public class Test1
         System.out.println("=========Testing generable=========");
 
         Factory c1 = new ClientFactory();
-        Factory c2 = new PlancheFactory();
-        Factory c3 = new FournisseurFactory();
-        Factory c4 = new PanneauFactory();
+        Factory c2 = new BoardFactory();
+        Factory c3 = new SupplierFactory();
+        Factory c4 = new PanelFactory();
 
         ArrayList<String> data = new ArrayList<>();
         data.add("clients");
@@ -29,20 +29,20 @@ public class Test1
         ArrayList<String> data2 = new ArrayList<>();
         data2.add("fournisseurs");
         data2.add("fournisseur");
-        ArrayList<Generable> fournisseursG = r.readGenerable(data2,"src/etape2/fournisseurs.xml", c3, c4);
-        ArrayList<Decoupe> decoupes = algorithme1(clientsG, fournisseursG);
+        ArrayList<Generable> suppliersG = r.readGenerable(data2,"src/etape2/fournisseurs.xml", c3, c4);
+        ArrayList<Cut> cuts = algorithm1(clientsG, suppliersG);
 
         for (Generable clientG : clientsG) {
-            System.out.printf("\nLe client numéro %d effectue %d commandes.\n", clientG.getId(), clientG.getNombreP()); // comment savoir si c client ou fournisseur
-            for (int j = 0; j < clientG.getTailleCourante(); j++) {
+            System.out.printf("\nClient %d has placed %d orders.\n", clientG.getId(), clientG.getWoodNumber()); // comment savoir si c client ou fournisseur
+            for (int j = 0; j < clientG.getCurrentLength(); j++) {
 
-                Generable pg = clientG.getBois(j);
-                Planche planche = (Planche)pg;
-                Prix prix = (Prix)planche.getPrix();
-                Date date = (Date)planche.getDate();
-                System.out.println("id de planche : " + planche.getId() + "nombre : " + planche.getNombre() + " prix " + prix.getPrixString() + " date " + date.getDate());
+                Generable pg = clientG.getWood(j);
+                Board board = (Board)pg;
+                Price price = (Price)board.getPrice();
+                Date date = (Date)board.getDate();
+                System.out.println("id de planche : " + board.getId() + "nombre : " + board.getNumber() + " price " + price.getPriceString() + " date " + date.getDate());
 
-                if (planche.checkAllValidable()) {
+                if (board.checkAllValidable()) {
                     System.out.printf("Commande numéro %d valide.\n", j);
                 } else
                     System.out.printf("Commande numéro %d non valide.\n", j);
