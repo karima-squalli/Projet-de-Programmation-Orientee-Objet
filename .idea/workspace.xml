@@ -4,31 +4,65 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d949143c-3fae-4daa-a2f4-c2fbd89a7180" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logic/SupplierFactory.java" afterDir="false" />
+    <list default="true" id="f786a838-42cf-460d-a94f-5a56a1f37202" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entreessorties/Writer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entreessorties/Writer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entreessorties/XMLReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entreessorties/XMLReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entreessorties/XMLWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entreessorties/XMLWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/entreessorties/Reader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/entreessorties/Writer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/entreessorties/XMLReader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/entreessorties/XMLWriter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape2/decoupes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape2/decoupes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape3/decoupe_1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape3/decoupe_10.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape3/decoupe_11.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape3/decoupe_12.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape3/decoupe_13.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape3/decoupe_14.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape3/decoupe_15.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape3/decoupe_16.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape3/decoupe_17.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape3/decoupe_2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape3/decoupe_3.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape3/decoupe_4.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape3/decoupe_5.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape3/decoupe_6.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape3/decoupe_7.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape3/decoupe_8.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape3/decoupe_9.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape3/decoupes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape3/decoupes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/logic/Algorithm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/logic/Algorithm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/logic/Cut.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/logic/Cut.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/logic/MainEtape2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/logic/MainEtape2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/logic/Test1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/logic/Test1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/logic/Test2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/logic/Test2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entreessorties/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inputsoutputs/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entreessorties/Writer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inputsoutputs/Writer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entreessorties/XMLReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inputsoutputs/XMLReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entreessorties/XMLWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inputsoutputs/XMLWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape2/decoupes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape3/cuts.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape3/decoupe_1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape3/decoupe_10.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape3/decoupe_11.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape3/decoupe_12.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape3/decoupe_13.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape3/decoupe_14.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape3/decoupe_15.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape3/decoupe_16.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape3/decoupe_17.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape3/decoupe_2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape3/decoupe_3.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape3/decoupe_4.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape3/decoupe_5.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape3/decoupe_6.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape3/decoupe_7.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape3/decoupe_8.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape3/decoupe_9.svg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/etape3/decoupes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape3/decoupes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Algorithme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Algorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Bois.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Wood.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/ClientFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/ClientFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Decoupe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Cut.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Dimensions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Dimensions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Factory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Fournisseur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Supplier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/FournisseurFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Generable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Generable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/Algorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Algorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/Cut.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Cut.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logic/MainEtape2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/MainEtape2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Panneau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Panel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/PanneauFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/PanelFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Personne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Planche.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/PlancheFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/BoardFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Prix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Price.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logic/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Test1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logic/Test2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Test2.java" afterDir="false" />
     </list>
@@ -37,10 +71,18 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="229ykTGBBJk7HyEiv3U7gnsahA9" />
+  <component name="ProjectId" id="22LGIA6sWCLssltyRpg9Xa3zgwG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -48,10 +90,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -59,8 +98,9 @@
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="logic.MainEtape2" />
+      <option name="MAIN_CLASS_NAME" value="logic.MainTest" />
       <module name="pg220-2021-ksquallihou_owankida" />
+      <option name="PROGRAM_PARAMETERS" value="etape3" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -69,14 +109,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d949143c-3fae-4daa-a2f4-c2fbd89a7180" name="Changes" comment="" />
-      <created>1639264242367</created>
+      <changelist id="f786a838-42cf-460d-a94f-5a56a1f37202" name="Changes" comment="" />
+      <created>1639609376504</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1639264242367</updated>
-      <workItem from="1639264243864" duration="11338000" />
-      <workItem from="1639524380149" duration="14027000" />
-      <workItem from="1639595174826" duration="7344000" />
+      <updated>1639609376504</updated>
+      <workItem from="1639609378991" duration="9273000" />
     </task>
     <servers />
   </component>

@@ -1,4 +1,4 @@
-package entreessorties;
+package inputsoutputs;
 
 import logic.Factory;
 import logic.Generable;

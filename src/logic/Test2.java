@@ -1,6 +1,6 @@
 package logic;
 
-import entreessorties.Writer;
+import inputsoutputs.Writer;
 
 import javax.xml.stream.*;
 import java.io.FileNotFoundException;

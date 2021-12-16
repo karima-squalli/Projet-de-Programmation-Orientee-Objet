@@ -1,4 +1,4 @@
-package entreessorties;
+package inputsoutputs;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -12,8 +12,6 @@ import logic.*;
 
 
 class XMLReader implements Reader {
-
-
 
     @Override
     public ArrayList<Generable> readGenerable(ArrayList<String> data, String fileName, Factory f1, Factory f2) {

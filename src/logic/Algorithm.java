@@ -4,14 +4,14 @@ import java.util.ArrayList;
 
 
 public class Algorithm {
-    static int cutOutnumber;
+    static int cutoutnumber;
     static int algorithmNumber;
 
     // ========================================================= ALGORITHME 1 ==============================================================================================================
 
     public static ArrayList<Cut> algorithm1(ArrayList<Generable> clientsGenerable, ArrayList<Generable> suppliersGenerable) {
 
-        cutOutnumber = 1;
+        cutoutnumber = 1;
         algorithmNumber = 1;
         ArrayList<Cut> cuts = new ArrayList<>();
         ArrayList<Client> clients = new ArrayList<>();
@@ -53,8 +53,6 @@ public class Algorithm {
                             Dimensions panelDimensions = (Dimensions) panel.getDimensions();
                             if (panelsNumber > 0 && boardDate.toCompare(panelDate) && boardDimensions.toCompare(panelDimensions)) {
 
-                                System.out.printf("==========Panel n° %d.%d to be treated from supplier %d==============\n", panel.getId(), panel.getInitialNumber() - panelsNumber, supplier.getId());
-
                                 panelCutting(cuts, boardDimensions, board, panel, j, panel.getInitialNumber() - panelsNumber, board.getIdOwner(), supplier, panelDimensions);
                                 panel.setNumber(panelsNumber - 1);
                                 break;
@@ -71,7 +69,7 @@ public class Algorithm {
 
     public static ArrayList<Cut> algorithm2(ArrayList<Generable> clientsGenerable, ArrayList<Generable> suppliersGenerable) {
 
-        cutOutnumber = 1;
+        cutoutnumber = 1;
         algorithmNumber = 2;
         ArrayList<Cut> cuts = new ArrayList<>();
         ArrayList<Client> clients = new ArrayList<>();
@@ -92,8 +90,7 @@ public class Algorithm {
         ArrayList<Board> sortedBoardsList = boardsSorting(boardsList);
         for (Board board : sortedBoardsList) {
 
-            //Board board = (Board) board;
-            System.out.printf("\n\n\n===============================Order n° %d to be treated from client %d=======================================\n", board.getId(), board.getIdOwner());
+            System.out.printf("\n===============================Order n° %d to be treated from client %d=======================================\n", board.getId(), board.getIdOwner());
 
             int boardsNumber = board.getNumber();
             Date boardDate = (Date) board.getDate();
@@ -114,13 +111,12 @@ public class Algorithm {
                         if (boardDate.toCompare(panelDate)) {
                             for (int k = 0; k < panelsNumber; k++) {
 
-
                                 Dimensions panelDimensions = (Dimensions) panel.getDimensions(k);
 
                                 if (boardDimensions.toCompare(panelDimensions)) {
                                     System.out.println("_______________________________________________________");
 
-                                    panelCutting(cuts, boardDimensions, (Board) board, panel, j, k, board.getIdOwner(), supplier, panelDimensions);
+                                    panelCutting(cuts, boardDimensions, board, panel, j, k, board.getIdOwner(), supplier, panelDimensions);
 
                                     panelDimensions.setDimensions(panelDimensions.getLength() - boardDimensions.getLength(), panelDimensions.getWidth());
                                     k = panelsNumber;
@@ -142,9 +138,9 @@ public class Algorithm {
 
     // ========================================================= ALGORITHME 3 ==============================================================================================================
 
-    public static ArrayList<Cut> algorithme3(ArrayList<Generable> clientsGenerable, ArrayList<Generable> suppliersGenerable) {
+    public static ArrayList<Cut> algorithm3(ArrayList<Generable> clientsGenerable, ArrayList<Generable> suppliersGenerable) {
 
-        cutOutnumber = 1;
+        cutoutnumber = 1;
         algorithmNumber = 3;
 
         ArrayList<Cut> cuts = new ArrayList<>();
@@ -167,13 +163,11 @@ public class Algorithm {
         ArrayList<Board> boardsList = listOfBoards(clients);
         ArrayList<Board> sortedBoardsList = sortedBoardsListByWidth(boardsList);
 
-        System.out.println("taille = " + sortedBoardsList.size()) ;
-
         int longueurInt;
         for (int i=0; i<sortedBoardsList.size(); i++) {
-            Wood wood = sortedBoardsList.get(i); // make this return board
-            Board board = (Board) wood;
-            System.out.printf("\n\n\n===============================Order n° %d to be treated from client %d=======================================\n", board.getId(), board.getIdOwner());
+            Board board = sortedBoardsList.get(i);
+
+            System.out.printf("\n===============================Order n° %d to be treated from client %d=======================================\n", board.getId(), board.getIdOwner());
 
             int boardsNumber = board.getNumber();
             Date boardDate = (Date) board.getDate();
@@ -198,16 +192,15 @@ public class Algorithm {
                                 Dimensions panelDimensions = (Dimensions) panel.getDimensions(k);
 
                                 if (boardDimensions.toCompare(panelDimensions)) {
-                                    System.out.println("_______________________________________________________");
 
-                                    panelCutting(cuts, boardDimensions, board, panel, board.getInitialNumber() - board.getNumber() , k, wood.getIdOwner(), supplier, panelDimensions);
+                                    panelCutting(cuts, boardDimensions, board, panel, board.getInitialNumber() - board.getNumber() , k, board.getIdOwner(), supplier, panelDimensions);
 
                                     panelDimensions.setDimensions(panelDimensions.getLength() , panelDimensions.getWidth() - boardDimensions.getWidth());
                                     longueurInt = boardDimensions.getLength();
                                     board.setNumber(board.getNumber()-1);
-                                    System.out.println("number of boards remaining == " + board.getNumber());
+
                                     if (board.getNumber() == 0) {
-                                        sortedBoardsList.remove(wood);
+                                        sortedBoardsList.remove(board);
                                     }
 
                                     for (int m = 0; m < sortedBoardsList.size(); m++) {
@@ -220,11 +213,12 @@ public class Algorithm {
                                             Date board1Date = (Date) board1.getDate();
                                             Dimensions board1Dimensions = (Dimensions) board1.getDimensions();
                                             if (board1Date.toCompare(panelDate) && board1Dimensions.toCompare(panelDimensions) && board1Dimensions.getLength() <= longueurInt) {
+
+                                                System.out.printf("\n===============================Order n° %d to be treated from client %d=======================================\n", board1.getId(), board1.getIdOwner());
                                                 panelCutting(cuts, board1Dimensions, board1, panel, board1.getInitialNumber() - board1.getNumber() , k, board1.getIdOwner(), supplier, panelDimensions);
                                                 panelDimensions.setDimensions(panelDimensions.getLength(), panelDimensions.getWidth() - board1Dimensions.getWidth());
                                                 board1.setNumber(board1.getNumber() - 1);
 
-                                                System.out.println("number of boards remaining == " + board1.getNumber());
                                                 if (board1.getNumber() == 0) {
                                                     sortedBoardsList.remove(board1);
                                                     m--;
@@ -322,8 +316,8 @@ public class Algorithm {
         Cut cut = new Cut(x1, y1,panelDimensions.getInitialLengthString(), panelDimensions.getInitialWidthString(), x, y, idClient, boardId, supplier.getId(), panelId);
         cuts.add(cut);
 
-        System.out.println("Cut out n°" + cutOutnumber + ": board with id " + cut.getIdBoard() + " from client " + cut.getIdClient() + " was token from panel " + cut.getIdPanel() + " ---> x= " + cut.getX() + " ,y=" + cut.getY() + "\n");
-        cutOutnumber++;
+        System.out.println("Cutout n°" + cutoutnumber + ": board with id " + cut.getIdBoard() + " from client " + cut.getIdClient() + " was token from panel " + cut.getIdPanel() + " ---> x= " + cut.getX() + " ,y=" + cut.getY() + "\n");
+        cutoutnumber++;
     }
 
 }

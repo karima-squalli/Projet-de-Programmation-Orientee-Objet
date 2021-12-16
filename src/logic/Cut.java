@@ -1,6 +1,6 @@
 package logic;
 
-class Cut {
+public class Cut {
 
     private final String x;
     private final String y;

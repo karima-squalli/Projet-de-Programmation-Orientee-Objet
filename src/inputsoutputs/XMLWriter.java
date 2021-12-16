@@ -1,4 +1,6 @@
-package entreessorties;
+package inputsoutputs;
+
+import logic.Cut;
 
 import javax.xml.stream.XMLOutputFactory;
 import javax.xml.stream.XMLStreamException;
@@ -7,6 +9,8 @@ import java.io.FileOutputStream;
 import java.util.ArrayList;
 
 class XMLWriter implements Writer {
+
+    @Override
 
     public void writeCut(int doc, ArrayList<String>data, FileOutputStream out, int idProvider, String panel, int idClient, String board, String x, String y) throws XMLStreamException {
 
@@ -36,5 +40,10 @@ class XMLWriter implements Writer {
             writer.writeStartElement(data.get(10));
         writer.flush();
         writer.close();
+    }
+
+    @Override
+    public void writeCut(int algorithmNumber, ArrayList<Cut> cuts) {
+
     }
 }

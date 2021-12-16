@@ -1,6 +1,6 @@
 package logic;
 
-import entreessorties.Reader;
+import inputsoutputs.Reader;
 
 import java.util.ArrayList;
 
