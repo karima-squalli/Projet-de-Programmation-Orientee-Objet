@@ -7,7 +7,7 @@ public class Algorithm {
     static int cutoutnumber;
     static int algorithmNumber;
 
-    // ========================================================= ALGORITHME 1 ==============================================================================================================
+    // ========================================================= ALGORITHM 1 ==============================================================================================================
 
     public static ArrayList<Cut> algorithm1(ArrayList<Generable> clientsGenerable, ArrayList<Generable> suppliersGenerable) {
 
@@ -65,7 +65,7 @@ public class Algorithm {
         return cuts;
     }
 
-    // ========================================================= ALGORITHME 2 ==============================================================================================================
+    // ========================================================= ALGORITHM 2 ==============================================================================================================
 
     public static ArrayList<Cut> algorithm2(ArrayList<Generable> clientsGenerable, ArrayList<Generable> suppliersGenerable) {
 
@@ -87,7 +87,7 @@ public class Algorithm {
                 suppliers.add(supplier);
         }
         ArrayList<Board> boardsList = listOfBoards(clients);
-        ArrayList<Board> sortedBoardsList = boardsSorting(boardsList);
+        ArrayList<Board> sortedBoardsList = boardsSorting(boardsList,0);
         for (Board board : sortedBoardsList) {
 
             System.out.printf("\n===============================Order n° %d to be treated from client %d=======================================\n", board.getId(), board.getIdOwner());
@@ -134,11 +134,11 @@ public class Algorithm {
         return cuts;
     }
 
-    // =======================================================FIN ALGORITHME 2 ==============================================================================================================
+    // =======================================================END OF ALGORITHM 2 ==============================================================================================================
 
-    // ========================================================= ALGORITHME 3 ==============================================================================================================
+    // ========================================================= OPTIMIZED ALGORITHM ==============================================================================================================
 
-    public static ArrayList<Cut> algorithm3(ArrayList<Generable> clientsGenerable, ArrayList<Generable> suppliersGenerable) {
+    public static ArrayList<Cut> optimizedAlgorithm(ArrayList<Generable> clientsGenerable, ArrayList<Generable> suppliersGenerable) {
 
         cutoutnumber = 1;
         algorithmNumber = 3;
@@ -161,9 +161,9 @@ public class Algorithm {
                 suppliers.add(supplier);
         }
         ArrayList<Board> boardsList = listOfBoards(clients);
-        ArrayList<Board> sortedBoardsList = sortedBoardsListByWidth(boardsList);
+        ArrayList<Board> sortedBoardsList = boardsSorting(boardsList,1);
 
-        int longueurInt;
+        int lengthInt;
         for (int i=0; i<sortedBoardsList.size(); i++) {
             Board board = sortedBoardsList.get(i);
 
@@ -196,7 +196,7 @@ public class Algorithm {
                                     panelCutting(cuts, boardDimensions, board, panel, board.getInitialNumber() - board.getNumber() , k, board.getIdOwner(), supplier, panelDimensions);
 
                                     panelDimensions.setDimensions(panelDimensions.getLength() , panelDimensions.getWidth() - boardDimensions.getWidth());
-                                    longueurInt = boardDimensions.getLength();
+                                    lengthInt = boardDimensions.getLength();
                                     board.setNumber(board.getNumber()-1);
 
                                     if (board.getNumber() == 0) {
@@ -212,7 +212,7 @@ public class Algorithm {
 
                                             Date board1Date = (Date) board1.getDate();
                                             Dimensions board1Dimensions = (Dimensions) board1.getDimensions();
-                                            if (board1Date.toCompare(panelDate) && board1Dimensions.toCompare(panelDimensions) && board1Dimensions.getLength() <= longueurInt) {
+                                            if (board1Date.toCompare(panelDate) && board1Dimensions.toCompare(panelDimensions) && board1Dimensions.getLength() <= lengthInt) {
 
                                                 System.out.printf("\n===============================Order n° %d to be treated from client %d=======================================\n", board1.getId(), board1.getIdOwner());
                                                 panelCutting(cuts, board1Dimensions, board1, panel, board1.getInitialNumber() - board1.getNumber() , k, board1.getIdOwner(), supplier, panelDimensions);
@@ -226,7 +226,7 @@ public class Algorithm {
                                             }
                                         }
                                     }
-                                    panelDimensions.setDimensions(panelDimensions.getLength()-longueurInt, panelDimensions.getInitialWidth());
+                                    panelDimensions.setDimensions(panelDimensions.getLength()-lengthInt, panelDimensions.getInitialWidth());
 
                                     k = PanelsNumber;
                                     l = supplier.getCurrentLength();
@@ -245,7 +245,7 @@ public class Algorithm {
         return cuts;
     }
 
-    // =======================================================FIN ALGORITHME 3 ==============================================================================================================
+    // =======================================================END OF OPTIMIZED ALGORITHM ==============================================================================================================
 
     static ArrayList<Board> listOfBoards(ArrayList<Client> clients){
         ArrayList<Board> boards = new ArrayList<>();
@@ -258,51 +258,36 @@ public class Algorithm {
         return boards;
     }
 
-    static Board maximumLengthBoard(ArrayList<Board> boards){
-        Board max = boards.get(0);
+    //if test=0 the function returns the board with maximum length, if test=1 it returns the board with maximum width
+    static Board maximumBoard(ArrayList<Board> boards, int test){
+        Board toReturn = boards.get(0);
         for(int i=1;i<boards.size();i++){
             Dimensions dimensions = (Dimensions)boards.get(i).getDimensions();
-            Dimensions dimensionsMax = (Dimensions)max.getDimensions();
-            if(dimensions.getLength()>dimensionsMax.getLength())
-                max=boards.get(i);
+            Dimensions toReturnDimensions = (Dimensions)toReturn.getDimensions();
+            if (test == 0) {
+                if (dimensions.getLength() > toReturnDimensions.getLength())
+                    toReturn = boards.get(i);
+            }
+            if (test==1) {
+                if (dimensions.getWidth() > toReturnDimensions.getWidth())
+                    toReturn = boards.get(i);
+            }
         }
-        return max;
+
+        return toReturn;
     }
 
-    static ArrayList<Board> boardsSorting(ArrayList<Board> boards){
+    //this function sorts a list of boards by length(if test=0), or by width(if test=1)
+
+    static ArrayList<Board> boardsSorting(ArrayList<Board> boards, int test){
         int size = boards.size();
         ArrayList<Board> sortedBoards = new ArrayList<>();
         while(sortedBoards.size() != size){
-            Board max = maximumLengthBoard(boards);
-            sortedBoards.add(max);
-            boards.remove(max);
-
+            Board board = maximumBoard(boards,test);
+            sortedBoards.add(board);
+            boards.remove(board);
         }
         return sortedBoards;
-    }
-
-
-    public static Board maximumWidthBoard(ArrayList<Board> boardsList){
-        Board max = boardsList.get(0);
-        for(int i=1;i<boardsList.size();i++){
-            Dimensions dimensions = (Dimensions)boardsList.get(i).getDimensions();
-            Dimensions dimensionsMax = (Dimensions)max.getDimensions();
-            if(dimensions.getWidth()>dimensionsMax.getWidth())
-                max=boardsList.get(i);
-        }
-        return max;
-    }
-
-    public static ArrayList<Board> sortedBoardsListByWidth(ArrayList<Board> boardsList){
-        int size = boardsList.size();
-        ArrayList<Board> sortedBoardsList = new ArrayList<>();
-        while(sortedBoardsList.size() != size){
-            Board max = maximumWidthBoard(boardsList);
-            sortedBoardsList.add(max);
-            boardsList.remove(max);
-
-        }
-        return sortedBoardsList;
     }
 
     public static void panelCutting(ArrayList<Cut>cuts, Dimensions boardDimensions, Board board, Panel panel, int k, int l, int idClient, Supplier supplier, Dimensions panelDimensions) {

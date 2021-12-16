@@ -5,66 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f786a838-42cf-460d-a94f-5a56a1f37202" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/entreessorties/Reader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/entreessorties/Writer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/entreessorties/XMLReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/entreessorties/XMLWriter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape2/decoupes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape2/decoupes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape3/decoupe_1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape3/decoupe_10.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape3/decoupe_11.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape3/decoupe_12.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape3/decoupe_13.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape3/decoupe_14.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape3/decoupe_15.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape3/decoupe_16.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape3/decoupe_17.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape3/decoupe_2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape3/decoupe_3.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape3/decoupe_4.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape3/decoupe_5.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape3/decoupe_6.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape3/decoupe_7.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape3/decoupe_8.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape3/decoupe_9.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape3/decoupes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/etape3/decoupes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/logic/Algorithm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/logic/Algorithm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/logic/Cut.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/logic/Cut.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/logic/MainEtape2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/logic/MainEtape2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/logic/Test1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/logic/Test1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/logic/Test2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pg220-2021-ksquallihou_owankida/logic/Test2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entreessorties/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inputsoutputs/Reader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entreessorties/Writer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inputsoutputs/Writer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entreessorties/XMLReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inputsoutputs/XMLReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entreessorties/XMLWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inputsoutputs/XMLWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/etape2/decoupes.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/etape3/cuts.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/etape3/decoupe_1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/etape3/decoupe_10.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/etape3/decoupe_11.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/etape3/decoupe_12.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/etape3/decoupe_13.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/etape3/decoupe_14.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/etape3/decoupe_15.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/etape3/decoupe_16.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/etape3/decoupe_17.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/etape3/decoupe_2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/etape3/decoupe_3.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/etape3/decoupe_4.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/etape3/decoupe_5.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/etape3/decoupe_6.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/etape3/decoupe_7.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/etape3/decoupe_8.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/etape3/decoupe_9.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/etape3/decoupes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape3/decoupes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape3/decoupes_optimised.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape3/decoupes_optimised.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logic/Algorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Algorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Cut.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Cut.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logic/MainEtape2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/MainEtape2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Test1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Test2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Test2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/MainTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +36,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -115,6 +61,7 @@
       <option name="presentableId" value="Default" />
       <updated>1639609376504</updated>
       <workItem from="1639609378991" duration="9273000" />
+      <workItem from="1639655202895" duration="2433000" />
     </task>
     <servers />
   </component>
@@ -131,5 +78,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

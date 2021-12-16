@@ -16,9 +16,9 @@ public class MainTest {
 
         String folderName = args[0];
 
-        String numEtape = folderName.substring(5, 6);
+        String stepNumber = folderName.substring(5, 6);
 
-        int step =  Integer.parseInt(numEtape);
+        int step =  Integer.parseInt(stepNumber);
 
         Reader r = Reader.getReader(0);
 
@@ -31,32 +31,33 @@ public class MainTest {
         data1.add("clients");
         data1.add("client");
         String fileNameClients = String.format("src/etape%d/clients.xml", step);
-        ArrayList<Generable> clientsGenerable = r.readGenerable(data1,fileNameClients, c1, c2);
-
+        ArrayList<Generable> clientsGenerable1 = r.readGenerable(data1,fileNameClients, c1, c2);
+        ArrayList<Generable> clientsGenerable2 = r.readGenerable(data1,fileNameClients, c1, c2);
         ArrayList<String> data2 = new ArrayList<>();
         data2.add("fournisseurs");
         data2.add("fournisseur");
-        String fileNameFournisseurs = String.format("src/etape%d/fournisseurs.xml", step);
-        ArrayList<Generable> suppliersGenerable = r.readGenerable(data2,fileNameFournisseurs, c3, c4);
-
+        String fileNameSuppliers = String.format("src/etape%d/fournisseurs.xml", step);
+        ArrayList<Generable> suppliersGenerable1 = r.readGenerable(data2,fileNameSuppliers, c3, c4);
+        ArrayList<Generable> suppliersGenerable2 = r.readGenerable(data2,fileNameSuppliers, c3, c4);
         switch (step) {
             case 1 -> {
-                checkGenerables(clientsGenerable, 1);
-                checkGenerables(suppliersGenerable, 0);
+                checkGenerables(clientsGenerable2, 1);
+                checkGenerables(suppliersGenerable2, 0);
             }
             case 2 -> {
-                ArrayList<Cut> cuts1 = algorithm1(clientsGenerable, suppliersGenerable);
+                ArrayList<Cut> cuts1 = algorithm1(clientsGenerable2, suppliersGenerable2);
                 write(cuts1, 1, step);
             }
             case 3 -> {
-                ArrayList<Generable> clients1 = (ArrayList<Generable>) clientsGenerable.clone();
-                ArrayList<Generable> suppliers1 = (ArrayList<Generable>) suppliersGenerable.clone();
-                ArrayList<Cut> cuts2 = algorithm2(clients1, suppliersGenerable);
+
+                System.out.println("\n...................................RESULT WITH ALGORTHM 2....................................");
+                ArrayList<Cut> cuts2 = algorithm2(clientsGenerable1, suppliersGenerable1);
                 write(cuts2, 2, step);
-                ArrayList<Cut> cuts3 = algorithm3(clientsGenerable, suppliers1);
+                System.out.println("\n.............................RESULT WITH THE OPTIMIZED ALGORTHM ....................................");
+                ArrayList<Cut> cuts3 = optimizedAlgorithm(clientsGenerable2, suppliersGenerable2);
                 write(cuts3, 3, step);
             }
-            default -> System.out.println("No such number step found.");
+            default -> System.out.println("No such step number found.");
         }
     }
 
