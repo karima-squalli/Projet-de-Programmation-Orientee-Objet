@@ -3,15 +3,16 @@ package logic;
 import java.util.ArrayList;
 
 
-public class Algorithm {
-    static int cutoutnumber;
+class Algorithm {
+
+    static int cutoutNumber;
     static int algorithmNumber;
 
     // ========================================================= ALGORITHM 1 ==============================================================================================================
 
     public static ArrayList<Cut> algorithm1(ArrayList<Generable> clientsGenerable, ArrayList<Generable> suppliersGenerable) {
 
-        cutoutnumber = 1;
+        cutoutNumber = 1;
         algorithmNumber = 1;
         ArrayList<Cut> cuts = new ArrayList<>();
         ArrayList<Client> clients = new ArrayList<>();
@@ -69,11 +70,13 @@ public class Algorithm {
 
     public static ArrayList<Cut> algorithm2(ArrayList<Generable> clientsGenerable, ArrayList<Generable> suppliersGenerable) {
 
-        cutoutnumber = 1;
+        cutoutNumber = 1;
         algorithmNumber = 2;
+
         ArrayList<Cut> cuts = new ArrayList<>();
         ArrayList<Client> clients = new ArrayList<>();
         ArrayList<Supplier> suppliers = new ArrayList<>();
+
         for (Generable clientGenerable : clientsGenerable) {
 
             Client client = (Client) clientGenerable;
@@ -86,6 +89,7 @@ public class Algorithm {
             if (supplier.isValid())
                 suppliers.add(supplier);
         }
+
         ArrayList<Board> boardsList = listOfBoards(clients);
         ArrayList<Board> sortedBoardsList = boardsSorting(boardsList,0);
         for (Board board : sortedBoardsList) {
@@ -140,7 +144,7 @@ public class Algorithm {
 
     public static ArrayList<Cut> optimizedAlgorithm(ArrayList<Generable> clientsGenerable, ArrayList<Generable> suppliersGenerable) {
 
-        cutoutnumber = 1;
+        cutoutNumber = 1;
         algorithmNumber = 3;
 
         ArrayList<Cut> cuts = new ArrayList<>();
@@ -247,7 +251,9 @@ public class Algorithm {
 
     // =======================================================END OF OPTIMIZED ALGORITHM ==============================================================================================================
 
-    static ArrayList<Board> listOfBoards(ArrayList<Client> clients){
+    //  ================================================= COMMON FUNCTIONS TO THE ALGORITHMS ===================================================
+
+    private static ArrayList<Board> listOfBoards(ArrayList<Client> clients){
         ArrayList<Board> boards = new ArrayList<>();
 
         for (Client client : clients) {
@@ -258,8 +264,8 @@ public class Algorithm {
         return boards;
     }
 
-    //if test=0 the function returns the board with maximum length, if test=1 it returns the board with maximum width
-    static Board maximumBoard(ArrayList<Board> boards, int test){
+    // If test=0 the function returns the board with maximum length, if test=1 it returns the board with maximum width
+    private static Board maximumBoard(ArrayList<Board> boards, int test){
         Board toReturn = boards.get(0);
         for(int i=1;i<boards.size();i++){
             Dimensions dimensions = (Dimensions)boards.get(i).getDimensions();
@@ -277,9 +283,8 @@ public class Algorithm {
         return toReturn;
     }
 
-    //this function sorts a list of boards by length(if test=0), or by width(if test=1)
-
-    static ArrayList<Board> boardsSorting(ArrayList<Board> boards, int test){
+    // This function sorts a list of boards by length(if test=0), or by width(if test=1)
+    private static ArrayList<Board> boardsSorting(ArrayList<Board> boards, int test){
         int size = boards.size();
         ArrayList<Board> sortedBoards = new ArrayList<>();
         while(sortedBoards.size() != size){
@@ -289,8 +294,8 @@ public class Algorithm {
         }
         return sortedBoards;
     }
-
-    public static void panelCutting(ArrayList<Cut>cuts, Dimensions boardDimensions, Board board, Panel panel, int k, int l, int idClient, Supplier supplier, Dimensions panelDimensions) {
+    
+    private static void panelCutting(ArrayList<Cut>cuts, Dimensions boardDimensions, Board board, Panel panel, int k, int l, int idClient, Supplier supplier, Dimensions panelDimensions) {
 
         String x = String.format("%d.00", panelDimensions.getInitialWidth() - panelDimensions.getWidth() + boardDimensions.getWidth());
         String y = String.format("%d.00", panelDimensions.getInitialLength() - panelDimensions.getLength() +  boardDimensions.getLength());
@@ -301,8 +306,8 @@ public class Algorithm {
         Cut cut = new Cut(x1, y1,panelDimensions.getInitialLengthString(), panelDimensions.getInitialWidthString(), x, y, idClient, boardId, supplier.getId(), panelId);
         cuts.add(cut);
 
-        System.out.println("Cutout n°" + cutoutnumber + ": board with id " + cut.getIdBoard() + " from client " + cut.getIdClient() + " was token from panel " + cut.getIdPanel() + " ---> x= " + cut.getX() + " ,y=" + cut.getY() + "\n");
-        cutoutnumber++;
+        System.out.println("Cutout n°" + cutoutNumber + ": board with id " + cut.getIdBoard() + " from client " + cut.getIdClient() + " was token from panel " + cut.getIdPanel() + " ---> x= " + cut.getX() + " ,y=" + cut.getY() + "\n");
+        cutoutNumber++;
     }
 
 }

@@ -3,11 +3,11 @@ package logic;
 
 class Supplier extends Person {
 
-    public Supplier(int id) {
+    protected Supplier(int id) {
         super(id);
     }
 
-    public Supplier() {
+    protected Supplier() {
         super(0);
     }
 

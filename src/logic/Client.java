@@ -2,11 +2,11 @@ package logic;
 
 class Client extends Person {
 
-    Client() {
+    protected Client() {
         super(0);
     }
 
-    Client(int id) {
+    protected Client(int id) {
         super(id);
     }
 

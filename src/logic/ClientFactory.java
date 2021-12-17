@@ -1,6 +1,6 @@
 package logic;
 
-public class ClientFactory implements Factory{
+class ClientFactory implements Factory{
 
     @Override
     public Generable generateGenerable() {

@@ -10,7 +10,7 @@ abstract class Wood implements Generable {
     protected int initialNumber;
     protected int idOwner;
 
-    Wood(int id, int number, int idOwner) {
+    protected Wood(int id, int number, int idOwner) {
         this.id = id;
         this.number = number;
         this.initialNumber = number;
@@ -30,34 +30,35 @@ abstract class Wood implements Generable {
         return true;
     }
 
-    void setNumber(int number) {
+    protected void setNumber(int number) {
         this.number = number;
     }
 
-    int getInitialNumber() {
+    protected int getInitialNumber() {
         return initialNumber;
     }
+
     public int getId(){
         return id;
     }
 
-    int getNumber(){return number;}
+    protected int getNumber(){return number;}
 
     public int getIdOwner(){return idOwner;}
 
-    Validable getDate(){
+    protected Validable getDate(){
         return listV.get(0);
     }
 
-    Validable getPrice(){
+    protected Validable getPrice(){
         return listV.get(1);
     }
 
-    Validable getDimensions(){
+    protected Validable getDimensions(){
         return listV.get(2);
     }
 
-    Validable getDimensions(int i) {
+    protected Validable getDimensions(int i) {
         return listV.get(2+i);
     }
 

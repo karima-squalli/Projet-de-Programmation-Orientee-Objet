@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public interface Writer {
 
-    static Writer getWriter(int code){
+    static Writer getWriter(int code) {
         return switch (code) {
             case 0 -> new XMLWriter();
             case 1 -> new SVGWriter();

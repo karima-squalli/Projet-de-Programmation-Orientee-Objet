@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public interface Reader {
 
-    static Reader getReader(int code){
+    static Reader getReader(int code) {
         return switch (code) {
             case 0 -> new XMLReader();
             default -> null;

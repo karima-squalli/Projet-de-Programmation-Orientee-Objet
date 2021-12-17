@@ -1,4 +1,5 @@
 package inputsoutputs;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -43,7 +44,7 @@ class XMLReader implements Reader {
 
                     Date date = new Date(reader.getAttributeValue(2));
                     Price price = new Price(reader.getAttributeValue(3));
-                    reader.nextTag(); // To get the dimensions
+                    reader.nextTag();
                     listV.add(date);
                     listV.add(price);
                     for (int i = 0; i<number; i++) {

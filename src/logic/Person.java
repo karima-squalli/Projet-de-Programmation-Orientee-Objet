@@ -10,12 +10,12 @@ abstract class Person implements Generable, Validable{
     private int maximumLength = 10;
     private Wood[] wood = new Wood[maximumLength];
 
-    Person(int id) {
+    protected Person(int id) {
         this.id = id;
     }
 
 
-    public void add(Wood element) {
+    protected void add(Wood element) {
 
         if (currentLength == maximumLength) {
             maximumLength = maximumLength * 2;
@@ -28,7 +28,7 @@ abstract class Person implements Generable, Validable{
         woodNumber = currentLength;
     }
 
-    public void removeP(Wood elementToBeDeleted) {
+    protected void removeP(Wood elementToBeDeleted) {
         Wood[] newWood = null;
         for (int i = 0; i < wood.length - 1; i++) {
             if (wood[i] == elementToBeDeleted) {
