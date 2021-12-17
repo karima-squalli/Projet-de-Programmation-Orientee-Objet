@@ -41,16 +41,8 @@ class SVGWriter implements Writer {
                         int height = -(int)Double.parseDouble(cut1.getY1()) + (int)Double.parseDouble(cut1.getY());
                         int width = -(int)Double.parseDouble(cut1.getX1()) + (int)Double.parseDouble(cut1.getX());
 
-                        String board = String.format("<rect x=\"%s\" y=\"%s\"  width=\"%d\" height=\"%d\" style=\"fill:rgb(119,181,254)\" />", xRect, yRect, width, height);
+                        String board = String.format("<rect x=\"%s\" y=\"%s\"  width=\"%d\" height=\"%d\" stroke=\"#F00020\" stroke-width=\"2\" style=\"fill:rgb(119,181,254)\" />", xRect, yRect, width, height);
                         pw.println(board);
-                        String verticalCut1 = String.format("<line x1=\"%s\" y1=\"%s\" x2=\"%s\" y2=\"%s\" style=\"stroke:rgb(255,0,0);stroke-width:2\" />", cut1.getX() , cut1.getY1(), cut1.getX(), cut1.getY());
-                        String horizontalCut1 = String.format("<line x1=\"%s\" y1=\"%s\" x2=\"%s\" y2=\"%s\" style=\"stroke:rgb(255,0,0);stroke-width:2\" />", cut1.getX1(), cut1.getY(),cut1.getX(),cut1.getY());
-                        String vercticalCut2 = String.format("<line x1=\"%s\" y1=\"%s\" x2=\"%s\" y2=\"%s\" style=\"stroke:rgb(255,0,0);stroke-width:2\" />", cut1.getX1(), cut1.getY1(), cut1.getX1(), cut1.getY());
-                        String horizontalCut2 = String.format("<line x1=\"%s\" y1=\"%s\" x2=\"%s\" y2=\"%s\" style=\"stroke:rgb(255,0,0);stroke-width:2\" />", cut1.getX1(), cut1.getY1() , cut1.getX(), cut1.getY1());
-                        pw.println(verticalCut1);
-                        pw.println(horizontalCut1);
-                        pw.println(vercticalCut2);
-                        pw.println(horizontalCut2);
                         cuts.remove(j);
                         j--;
                     }

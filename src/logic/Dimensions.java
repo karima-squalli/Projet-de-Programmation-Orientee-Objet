@@ -63,4 +63,12 @@ public class Dimensions implements Validable,Comparable {
         return width;
     }
 
+    String getLengthString() {
+        return lengthString;
+    }
+
+    String getWidthString() {
+        return widthString;
+    }
+
 }
