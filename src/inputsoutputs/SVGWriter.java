@@ -2,7 +2,6 @@ package inputsoutputs;
 
 import logic.Cut;
 
-import javax.xml.stream.XMLStreamException;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintWriter;
@@ -23,11 +22,11 @@ class SVGWriter implements Writer {
                 String filePath = String.format("src/etape%d/decoupe%d.svg",algorithmNumber+1, counter);
 
                 if (algorithmNumber == 3)
-                    filePath = String.format("src/etape%d/decoupe_optimised%d.svg",algorithmNumber, counter);
+                    filePath = String.format("src/etape%d/decoupe_optimisee%d.svg",algorithmNumber, counter);
 
                 PrintWriter pw = new PrintWriter(filePath);
                 pw.println("<svg xmlns=\"http://www.w3.org/2000/svg\"");
-                String svg = String.format(" version=\"1.1\" width=\"360\" height=\"%d\">", (int)Double.parseDouble(cut.getLength()) + 30);
+                String svg = String.format(" version=\"1.1\" width=\"400\" height=\"%d\">", (int)Double.parseDouble(cut.getLength()) + 30);
                 pw.println(svg);
                 String panel = String.format("<rect width=\"%s\" height=\"%s\" style=\"fill:rgb(88,41,0)\" />", cut.getWidth(), cut.getLength());
                 pw.println(panel);
@@ -49,7 +48,7 @@ class SVGWriter implements Writer {
                 }
                 String outline = String.format("<rect width=\"%s\" height=\"%s\" stroke=\"#000000\" stroke-width=\"2\" fill=\"transparent\" style=\"fill-opacity: .0;\" />", cut.getWidth(), cut.getLength());
                 pw.println(outline);
-                String text = String.format("<text x=\"0\" y=\"%d\" fill=\"white\">Cutouts made on the panel of id %s from the Supplier of id %d</text>",(int)Double.parseDouble(cut.getLength()) + 20, cut.getIdPanel(), cut.getIdSupplier());
+                String text = String.format("<text x=\"0\" y=\"%d\" fill=\"green\">Cutouts made on the panel of id %s from the Supplier of id %d</text>",(int)Double.parseDouble(cut.getLength()) + 20, cut.getIdPanel(), cut.getIdSupplier());
                 pw.println(text);
 
                 pw.println("</svg>");
@@ -65,7 +64,7 @@ class SVGWriter implements Writer {
 
 
      @Override
-     public void writeCut(int doc, ArrayList<String> data, FileOutputStream out, int idProvider, String panel, int idClient, String board, String x, String y) throws XMLStreamException {
+     public void writeCut(int doc, ArrayList<String> data, FileOutputStream out, int idProvider, String panel, int idClient, String board, String x, String y) {
 
      }
  }

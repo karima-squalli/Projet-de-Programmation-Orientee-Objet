@@ -11,7 +11,6 @@ import java.util.ArrayList;
 class XMLWriter implements Writer {
 
     @Override
-
     public void writeCut(int doc, ArrayList<String>data, FileOutputStream out, int idProvider, String panel, int idClient, String board, String x, String y) throws XMLStreamException {
 
         XMLOutputFactory output = XMLOutputFactory.newInstance();

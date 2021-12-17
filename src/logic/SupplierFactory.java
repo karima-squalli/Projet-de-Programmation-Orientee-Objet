@@ -4,14 +4,12 @@ public class SupplierFactory implements Factory {
 
     @Override
     public Generable generateGenerable() {
-        Supplier supplier= new Supplier();
-        return supplier;
+        return new Supplier();
     }
 
     @Override
     public Generable generateGenerable(int id) {
-        Supplier supplier= new Supplier(id);
-        return supplier;
+        return new Supplier(id);
     }
 
     @Override

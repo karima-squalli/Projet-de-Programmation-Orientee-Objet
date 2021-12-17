@@ -29,21 +29,23 @@ public class Dimensions implements Validable,Comparable {
         if (length != Double.parseDouble(lengthString) || width != Double.parseDouble(widthString)) {
             return false;
         }
-        if((!lengthString.substring(lengthString.length()-3).equals(".00")) || (!widthString.substring(widthString.length()-3).equals(".00"))){
+        if((!lengthString.endsWith(".00")) || (!widthString.endsWith(".00"))){
             return false;
         }
 
         return length > 0 && width > 0 && length >= width;
 
     }
+
+    @Override
     public Boolean toCompare(Validable v) {
-        Dimensions dimensions_to_compare = (Dimensions)v;
-        return (dimensions_to_compare.getLength() >= length) && (dimensions_to_compare.getWidth() >= width);
+        Dimensions dimensionsToCompare = (Dimensions)v;
+        return (dimensionsToCompare.getLength() >= length) && (dimensionsToCompare.getWidth() >= width);
     }
 
-    String getInitialLengthString() {return String.format("%d.00", initialLength);}
+    protected String getInitialLengthString() {return String.format("%d.00", initialLength);}
 
-    String getInitialWidthString() {return String.format("%d.00", initialWidth);}
+    protected String getInitialWidthString() {return String.format("%d.00", initialWidth);}
 
     void setDimensions(int length, int width) {
         this.length = length;
@@ -52,27 +54,27 @@ public class Dimensions implements Validable,Comparable {
         widthString = String.format("%d.00",width);
     }
 
-    int getInitialLength() {
+    protected int getInitialLength() {
         return initialLength;
     }
 
-    int getInitialWidth() {
+    protected int getInitialWidth() {
         return initialWidth;
     }
 
-    int getLength() {
+    protected int getLength() {
         return length;
     }
 
-    int getWidth() {
+    protected int getWidth() {
         return width;
     }
 
-    String getLengthString() {
+    protected String getLengthString() {
         return lengthString;
     }
 
-    String getWidthString() {
+    protected String getWidthString() {
         return widthString;
     }
 

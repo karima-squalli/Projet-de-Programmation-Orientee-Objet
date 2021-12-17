@@ -13,7 +13,7 @@ public class Cut {
     private final String x1;
     private final String y1;
 
-    public Cut(String x1, String y1, String length, String width, String x, String y, int idClient, String idBoard, int idSupplier, String idPanel) {
+    protected Cut(String x1, String y1, String length, String width, String x, String y, int idClient, String idBoard, int idSupplier, String idPanel) {
         this.x = x;
         this.y = y;
         this.idClient = idClient;
@@ -26,7 +26,7 @@ public class Cut {
         this.y1 = y1;
     }
 
-    public int getIdClient(){
+    protected int getIdClient(){
         return idClient;
     }
     public int getIdSupplier(){
@@ -38,7 +38,7 @@ public class Cut {
     public String getY(){
         return y;
     }
-    public String getIdBoard(){
+    protected String getIdBoard(){
         return idBoard;
     }
     public String getIdPanel(){

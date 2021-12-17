@@ -2,7 +2,6 @@ package logic;
 
 public class PanelFactory implements Factory {
 
-
     @Override
     public Generable generateGenerable() {
         return null;

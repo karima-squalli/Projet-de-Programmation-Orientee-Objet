@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 import static logic.Algorithm.*;
 
-public class MainTest {
+public class Main {
 
     public static void main(String[] args) {
 
@@ -50,10 +50,10 @@ public class MainTest {
             }
             case 3 -> {
 
-                System.out.println("\n...................................RESULT WITH ALGORTHM 2....................................");
+                System.out.println("\n...........................................RESULT WITH ALGORTHM 2............................................");
                 ArrayList<Cut> cuts2 = algorithm2(clientsGenerable1, suppliersGenerable1);
                 write(cuts2, 2, step);
-                System.out.println("\n.............................RESULT WITH THE OPTIMIZED ALGORTHM ....................................");
+                System.out.println("\n.....................................RESULT WITH THE OPTIMIZED ALGORTHM ............................................");
                 ArrayList<Cut> cuts3 = optimizedAlgorithm(clientsGenerable2, suppliersGenerable2);
                 write(cuts3, 3, step);
             }
@@ -99,7 +99,7 @@ public class MainTest {
 
         String fileName = String.format("src/etape%d/decoupes.xml", step);
         if (algorithmNumber == 3)
-            fileName = String.format("src/etape%d/decoupes_optimised.xml", step);
+            fileName = String.format("src/etape%d/decoupes_optimisees.xml", step);
 
         try(FileOutputStream out = new FileOutputStream(fileName)) {
             Writer writer = Writer.getWriter(0);

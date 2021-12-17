@@ -1,6 +1,7 @@
 package logic;
 
 public interface Validable {
+
     Boolean isValid();
 
     default Boolean isInteger(String string) {
