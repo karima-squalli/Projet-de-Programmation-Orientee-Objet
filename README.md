@@ -1,14 +1,14 @@
 # PG220 - Projet de Programmation Orientée Objet
 
 
-1/ Exécution du programme:
+1/ Exécution du programme :
 
 - La classe principale qui lance le programme est la classe "logic/Main", et regroupe les trois étapes. Cette classe a été implémentée de telle sorte que le programme exécute l’étape passée en ligne de commande (exemple : pour exécuter l’étape 2, l’utilisateur doit entrer en ligne de commande : >>> java Main etape2).
 
 - Pour l’étape2 et 3, des fichiers decoupes.xml (et decoupes_optimisees.xml pour l’étape3) et decoupe’i’.svg (et decoupe_optimisee’i’.svg) avec i le numéro de la découpe, sont créés et ajoutés dans le dossier propre à chaque étape après l'exécution du code.
 
 
-2/ Étapes complétées:
+2/ Étapes complétées :
 
 - Les trois premières étapes ont été entièrement complétées avec tous les algorithmes qui fonctionnent parfaitement.
 
