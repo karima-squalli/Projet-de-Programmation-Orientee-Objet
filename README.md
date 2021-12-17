@@ -1,5 +1,4 @@
-# PG220
-# Projet de Programmation Orientée Objet
+# PG220 - Projet de Programmation Orientée Objet
 
 
 1/ Exécution du programme:
