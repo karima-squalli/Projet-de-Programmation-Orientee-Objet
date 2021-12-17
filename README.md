@@ -25,4 +25,6 @@
 
 - Comme pour toute contrainte nous avons créé une classe (Price, Dimensions, Date) qui implémente l’interface Validable afin de vérifier cette contrainte, nous sommes dans la mesure d’ajouter n’importe quelle contrainte supplémentaire pour le client/fournisseur (couleur de bois, origine, dureté, etc).
 
+4/Environnement de travail
 
+Ce projet a été réalisé sur le logiciel Intellij avec une verson jdk17.
