@@ -18,6 +18,7 @@ public class Date implements Validable,Comparable {
 
     @Override
     public Boolean isValid() {
+
         if (date.charAt(2) != '.' || date.charAt(5) != '.') {
             return false;
         }
@@ -33,7 +34,11 @@ public class Date implements Validable,Comparable {
             return false;
         }
 
-        //Pour obtenir la date actuelle
+        if (day == 29 && month==2){
+            if(Math.floorMod(year,4)!=0)
+                return false;
+        }
+        //To obtain the actual date
         LocalDate today = LocalDate.now();
         String current_date= today.format(DateTimeFormatter.ofPattern("dd-MM-yy"));
 

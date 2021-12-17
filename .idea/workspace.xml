@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f786a838-42cf-460d-a94f-5a56a1f37202" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/logic/TestDate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/TestPrice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/etape3/decoupes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape3/decoupes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/etape3/decoupes_optimised.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape3/decoupes_optimised.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inputsoutputs/SVGWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inputsoutputs/SVGWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/Date.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Date.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logic/Dimensions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Dimensions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/Price.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Price.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/TestDimensions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/TestDimensions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +48,7 @@
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="logic.MainTest" />
       <module name="pg220-2021-ksquallihou_owankida" />
-      <option name="PROGRAM_PARAMETERS" value="etape2" />
+      <option name="PROGRAM_PARAMETERS" value="etape3" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -75,6 +77,7 @@
       <workItem from="1639655202895" duration="2433000" />
       <workItem from="1639681518982" duration="1971000" />
       <workItem from="1639737544687" duration="2720000" />
+      <workItem from="1639744793594" duration="3027000" />
     </task>
     <servers />
   </component>

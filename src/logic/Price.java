@@ -16,8 +16,10 @@ public class Price implements Validable,Comparable{
             return false;
         }
         price = Double.parseDouble(priceString);
+        if (!priceString.substring(priceString.length()-3,priceString.length()-2).equals("."))
+            return false;
+        return !(price <= 0);
 
-        return !(price < 0);
     }
 
     public Boolean toCompare(Validable v) {

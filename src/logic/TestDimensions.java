@@ -9,13 +9,15 @@ public class TestDimensions {
         ArrayList<Dimensions> arrayDimensions = new ArrayList<>();
 
         Dimensions dimensions1 = new Dimensions("300", "200");
-        Dimensions dimensions2 = new Dimensions("200", "350");
+        Dimensions dimensions2 = new Dimensions("200.00", "350.00");
         Dimensions dimensions3 = new Dimensions("100.00", "50.00");
         Dimensions dimensions4 = new Dimensions("100.01", "70.00");
         Dimensions dimensions5 = new Dimensions("200.00", "200.00");
         Dimensions dimensions6 = new Dimensions("bli", "10.00");
         Dimensions dimensions7 = new Dimensions("90.00", "bli");
+        Dimensions dimensions8 = new Dimensions("90,00", "50,00");
 
+        //System.out.printf("%s\n",dimensions3.getLengthString().substring(dimensions7.getLengthString().length()-2));
         arrayDimensions.add(dimensions1);
         arrayDimensions.add(dimensions2);
         arrayDimensions.add(dimensions3);
@@ -23,6 +25,7 @@ public class TestDimensions {
         arrayDimensions.add(dimensions5);
         arrayDimensions.add(dimensions6);
         arrayDimensions.add(dimensions7);
+        arrayDimensions.add(dimensions8);
 
         for (int i=0; i<arrayDimensions.size(); i++) {
             Dimensions dimensions = arrayDimensions.get(i);

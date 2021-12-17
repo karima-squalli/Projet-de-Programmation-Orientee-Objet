@@ -29,7 +29,12 @@ public class Dimensions implements Validable,Comparable {
         if (length != Double.parseDouble(lengthString) || width != Double.parseDouble(widthString)) {
             return false;
         }
+        if((!lengthString.substring(lengthString.length()-3).equals(".00")) || (!widthString.substring(widthString.length()-3).equals(".00"))){
+            return false;
+        }
+
         return length > 0 && width > 0 && length >= width;
+
     }
     public Boolean toCompare(Validable v) {
         Dimensions dimensions_to_compare = (Dimensions)v;
