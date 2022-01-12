@@ -1,6 +1,14 @@
 # PG220 - Projet de Programmation Orientée Objet
 
 
+
+Réalisé par:
+SQUALLI HOUSSAINI Karima
+WANKIDA Oumaima
+
+___________________________________________________________________________________________________________________________________________________________
+
+
 1/ Exécution du programme :
 
 - La classe principale qui lance le programme est la classe "logic/Main", et regroupe les trois étapes. Cette classe a été implémentée de telle sorte que le programme exécute l’étape passée en ligne de commande (exemple : pour exécuter l’étape 2, l’utilisateur doit entrer en ligne de commande : >>> java Main etape2).
