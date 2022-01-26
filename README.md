@@ -1,14 +1,22 @@
 # PG220 - Projet de Programmation Orientée Objet
 
 
-1/ Exécution du programme:
+
+Réalisé par:
+SQUALLI HOUSSAINI Karima &
+WANKIDA Oumaima
+
+___________________________________________________________________________________________________________________________________________________________
+
+
+1/ Exécution du programme :
 
 - La classe principale qui lance le programme est la classe "logic/Main", et regroupe les trois étapes. Cette classe a été implémentée de telle sorte que le programme exécute l’étape passée en ligne de commande (exemple : pour exécuter l’étape 2, l’utilisateur doit entrer en ligne de commande : >>> java Main etape2).
 
 - Pour l’étape2 et 3, des fichiers decoupes.xml (et decoupes_optimisees.xml pour l’étape3) et decoupe’i’.svg (et decoupe_optimisee’i’.svg) avec i le numéro de la découpe, sont créés et ajoutés dans le dossier propre à chaque étape après l'exécution du code.
 
 
-2/ Étapes complétées:
+2/ Étapes complétées :
 
 - Les trois premières étapes ont été entièrement complétées avec tous les algorithmes qui fonctionnent parfaitement.
 
@@ -25,4 +33,6 @@
 
 - Comme pour toute contrainte nous avons créé une classe (Price, Dimensions, Date) qui implémente l’interface Validable afin de vérifier cette contrainte, nous sommes dans la mesure d’ajouter n’importe quelle contrainte supplémentaire pour le client/fournisseur (couleur de bois, origine, dureté, etc).
 
+4/ Environnement de travail : 
 
+- Ce projet a été réalisé sur l'environnement de travail IntelliJ avec une version Java SE 17.

@@ -50,10 +50,10 @@ public class Main {
             }
             case 3 -> {
 
-                System.out.println("\n...........................................RESULT WITH ALGORTHM 2............................................");
+                System.out.println("\n...........................................RESULT WITH ALGORITHM 2............................................");
                 ArrayList<Cut> cuts2 = algorithm2(clientsGenerable1, suppliersGenerable1);
                 write(cuts2, 2, step);
-                System.out.println("\n.....................................RESULT WITH THE OPTIMIZED ALGORTHM ............................................");
+                System.out.println("\n.....................................RESULT WITH THE OPTIMIZED ALGORITHM ............................................");
                 ArrayList<Cut> cuts3 = optimizedAlgorithm(clientsGenerable2, suppliersGenerable2);
                 write(cuts3, 3, step);
             }
