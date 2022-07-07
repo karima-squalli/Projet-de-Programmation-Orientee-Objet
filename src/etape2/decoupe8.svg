@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+ version="1.1" width="400" height="230">
+<rect width="100.00" height="200.00" style="fill:rgb(88,41,0)" />
+<rect x="0" y="0"  width="60" height="70" stroke="#F00020" stroke-width="2" style="fill:rgb(119,181,254)" />
+<rect width="100.00" height="200.00" stroke="#000000" stroke-width="2" fill="transparent" style="fill-opacity: .0;" />
+<text x="0" y="220" fill="green">Cutouts made on the panel of id 0.7 from the Supplier of id 2</text>
+</svg>

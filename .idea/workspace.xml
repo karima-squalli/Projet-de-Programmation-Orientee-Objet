@@ -5,36 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f786a838-42cf-460d-a94f-5a56a1f37202" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inputsoutputs/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inputsoutputs/Reader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inputsoutputs/SVGWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inputsoutputs/SVGWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inputsoutputs/Writer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inputsoutputs/Writer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inputsoutputs/XMLReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inputsoutputs/XMLReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inputsoutputs/XMLWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inputsoutputs/XMLWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Algorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Algorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/BoardFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/BoardFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/ClientFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/ClientFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Cut.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Cut.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Date.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Date.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Dimensions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Dimensions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Factory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Panel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/PanelFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/PanelFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Price.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Price.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Supplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Supplier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/SupplierFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/SupplierFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Test1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Test2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/TestDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/TestDate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/TestDimensions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/TestDimensions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/TestPrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/TestPrice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Validable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Validable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Wood.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Wood.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape2/clients.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape2/clients.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape2/fournisseurs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape2/fournisseurs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape3/clients.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape3/clients.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape3/decoupes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape3/decoupes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/etape3/decoupes_optimisees.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/etape3/decoupes_optimisees.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +48,7 @@
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="logic.Main" />
       <module name="pg220-2021-ksquallihou_owankida" />
-      <option name="PROGRAM_PARAMETERS" value="etape3" />
+      <option name="PROGRAM_PARAMETERS" value="etape2" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -110,6 +86,8 @@
       <workItem from="1639681518982" duration="1971000" />
       <workItem from="1639737544687" duration="2720000" />
       <workItem from="1639744793594" duration="9495000" />
+      <workItem from="1639772186030" duration="54000" />
+      <workItem from="1657215890675" duration="457000" />
     </task>
     <servers />
   </component>
